@@ -1,726 +1,708 @@
 {
-  "exportDate": "2026-06-04T09:37:22.011Z",
+  "exportDate": "2026-06-16T08:58:36.295Z",
   "orders": [],
   "stock": [
     {
       "name": "BERLIN 1 MODULAR PLATE  WHITE 1M",
       "category": "Plate",
-      "qty": 4045,
+      "qty": 1290,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001G",
-      "location": "other"
+      "location": "Rack No. 213"
     },
     {
       "name": "BERLIN 2 MODULAR PLATE  WHITE 2M",
       "category": "Plate",
-      "qty": 1878,
+      "qty": 1550,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE 2002G",
-      "location": "other"
+      "location": "Rack No. 212"
     },
     {
       "name": "BERLIN 3 MODULAR PLATE  WHITE 3M",
       "category": "Plate",
-      "qty": 4571,
+      "qty": 1480,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003G",
-      "location": "other"
+      "location": "Rack No. 211"
     },
     {
       "name": "BERLIN 4 MODULAR PLATE  WHITE 4M",
       "category": "Plate",
-      "qty": 3158,
+      "qty": 1313,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004G",
-      "location": "other"
+      "location": "Rack No. 210"
     },
     {
       "name": "BERLIN 6 MODULAR PLATE   WHITE 6M",
       "category": "Plate",
-      "qty": 2211,
+      "qty": 850,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006G",
-      "location": "other"
+      "location": "Rack No. 209"
     },
     {
       "name": "BERLIN 8Hz MODULE PLATE  WHITE 8M",
       "category": "Plate",
-      "qty": 3538,
+      "qty": 860,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008G",
-      "location": "other"
+      "location": "Rack No. 207"
     },
     {
       "name": "BERLIN  8Sq MODULE PLATE  WHITE 8M",
       "category": "Plate",
-      "qty": 2807,
+      "qty": 750,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8088G",
-      "location": "other"
+      "location": "Rack No.208"
     },
     {
       "name": "BERLIN 12 MODULE PLATE  WHITE 12M",
       "category": "Plate",
-      "qty": 5927,
+      "qty": 430,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012G",
-      "location": "other"
+      "location": "Rack No. 206"
     },
     {
       "name": "BERLIN 16 MODULE PLATE  WHITE 16M",
       "category": "Plate",
-      "qty": 1675,
+      "qty": 415,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016G",
-      "location": "other"
+      "location": "Rack no. 205"
     },
     {
       "name": "BERLIN 18 MODULE  PLATE  WHITE 18M",
       "category": "Plate",
-      "qty": 2139,
+      "qty": 450,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018G",
-      "location": "other"
+      "location": "Rack No. 204"
     },
     {
       "name": "BERLIN 1 MODULAR PLATE  BLACK 1M",
       "category": "Plate",
-      "qty": 3605,
+      "qty": 1550,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001M",
-      "location": "other"
+      "location": "Rack No. 203"
     },
     {
       "name": "BERLIN 2 MODULAR PLATE  BLACK 2M",
       "category": "Plate",
-      "qty": 3630,
+      "qty": 2300,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE2002M",
-      "location": "other"
+      "location": "Rack No. 202"
     },
     {
       "name": "BERLIN 3 MODULAR PLATE  BLACK 3M",
       "category": "Plate",
-      "qty": 3866,
+      "qty": 1886,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003M",
-      "location": "other"
+      "location": "Rack No. 201"
     },
     {
       "name": "BERLIN  4 MODULAR PLATE   BLACK 4M",
       "category": "Plate",
-      "qty": 5777,
+      "qty": 1270,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004M",
-      "location": "other"
+      "location": "Rack No. 200"
     },
     {
       "name": "BERLIN 6 MODULAR PLATE   BLACK 6M",
       "category": "Plate",
-      "qty": 3924,
+      "qty": 1280,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006M",
-      "location": "other"
+      "location": "Rack No. 199"
     },
     {
       "name": "BERLIN 8Hz MODULE PLATE  BLACK 8M",
       "category": "Plate",
-      "qty": 2480,
+      "qty": 890,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008M",
-      "location": "other"
+      "location": "Rack No. 197"
     },
     {
       "name": "BERLIN  8Sq MODULE PLATE  BLACK 8M",
       "category": "Plate",
-      "qty": 2650,
+      "qty": 816,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8088M",
-      "location": "other"
+      "location": "Rack No. 198"
     },
     {
       "name": "BERLIN 12 MODULE PLATE  BLACK 12M",
       "category": "Plate",
-      "qty": 3556,
+      "qty": 500,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012M",
-      "location": "other"
+      "location": "Rack No. 196"
     },
     {
       "name": "BERLIN 16 MODULE PLATE  BLACK 16M",
       "category": "Plate",
-      "qty": 1005,
+      "qty": 480,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016M",
-      "location": "other"
+      "location": "Rack No. 195"
     },
     {
       "name": "BERLIN 18 MODULE  PLATE  BLACK 18M",
       "category": "Plate",
-      "qty": 373,
+      "qty": 370,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018M",
-      "location": "other"
+      "location": "Rack No. 194"
     },
     {
       "name": "BERLIN 1 MODULAR PLATE GREY 1M",
       "category": "Plate",
-      "qty": 520,
+      "qty": 510,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001T",
-      "location": "other"
+      "location": "Rack No. 193"
     },
     {
       "name": "BERLIN 2 MODULAR PLATE GREY 2M",
       "category": "Plate",
-      "qty": 1046,
+      "qty": 840,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE2002T",
-      "location": "other"
+      "location": "Rack No. 192"
     },
     {
       "name": "BERLIN  3 MODULAR PLATE GREY 3M",
       "category": "Plate",
-      "qty": 1456,
+      "qty": 780,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003T",
-      "location": "other"
+      "location": "Rack No. 191"
     },
     {
       "name": "BERLIN  4 MODULAR PLATE GREY 4M",
       "category": "Plate",
-      "qty": 1941,
+      "qty": 680,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004T",
-      "location": "other"
+      "location": "Rack No. 190"
     },
     {
       "name": "BERLIN 6 MODULAR PLATE GREY 6M",
       "category": "Plate",
-      "qty": 1278,
+      "qty": 368,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006T",
-      "location": "other"
+      "location": "Rack No. 189"
     },
     {
       "name": "BERLIN 8Hz MODULAR PLATE GREY 8M (h)",
       "category": "Plate",
-      "qty": 2074,
+      "qty": 490,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008T",
-      "location": "other"
+      "location": "Rack No. 187"
     },
     {
       "name": "BERLIN  8Sq MODULAR PLATE GREY 8M (s)",
       "category": "Plate",
-      "qty": 1338,
+      "qty": 260,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8088T",
-      "location": "other"
+      "location": "Rack No. 188"
     },
     {
       "name": "BERLIN 12 MODULAR PLATE GREY 12M",
       "category": "Plate",
-      "qty": 2183,
+      "qty": 378,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012T",
-      "location": "other"
+      "location": "Rack No. 186"
     },
     {
       "name": "BERLIN 16 MODULAR PLATE GREY 16M",
       "category": "Plate",
-      "qty": 355,
+      "qty": 350,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016T",
-      "location": "other"
+      "location": "Rack No. 185"
     },
     {
       "name": "BERLIN 18 MODULAR PLATE GREY 18M",
       "category": "Plate",
-      "qty": 413,
+      "qty": 112,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018T",
-      "location": "other"
+      "location": "Rack No. 184"
     },
     {
       "name": "BERLIN  1 MODULAR PLATE DARK WOOD 1M",
       "category": "Plate",
-      "qty": 370,
+      "qty": 380,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001T",
-      "location": "other"
+      "location": "Shelf No. 193"
     },
     {
       "name": "BERLIN 2 MODULAR PLATE  DARK WOOD 2M",
       "category": "Plate",
-      "qty": 1055,
+      "qty": 216,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE 2002T",
-      "location": "other"
+      "location": "Shelf No. 192"
     },
     {
       "name": "BERLIN 3 MODULAR PLATE  DARK WOOD 3M",
       "category": "Plate",
-      "qty": 1254,
+      "qty": 540,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003T",
-      "location": "other"
+      "location": "Shelf No. 191"
     },
     {
       "name": "BERLIN 4 MODULAR PLATE  DARK WOOD 4M",
       "category": "Plate",
-      "qty": 940,
+      "qty": 670,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004T",
-      "location": "other"
+      "location": "Shelf No. 190"
     },
     {
       "name": "BERLIN 6 MODULAR PLATE  DARK WOOD 6M",
       "category": "Plate",
-      "qty": 1160,
+      "qty": 860,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006T",
-      "location": "other"
+      "location": "Shelf No. 189"
     },
     {
       "name": "BERLIN 8Hz MODULAR PLATE  DARK WOOD 8M",
       "category": "Plate",
-      "qty": 1420,
+      "qty": 416,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008T",
-      "location": "other"
+      "location": "Shelf No. 187"
     },
     {
       "name": "BERLIN 8Sq MODULAR PLATE  DARK WOOD 8M",
       "category": "Plate",
-      "qty": 580,
+      "qty": 280,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8088T",
-      "location": "other"
+      "location": "Shelf No. 188"
     },
     {
       "name": "BERLIN 12 MODULAR PLATE  DARK WOOD 12M",
       "category": "Plate",
-      "qty": 1316,
+      "qty": 270,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012T",
-      "location": "other"
+      "location": "Shelf No. 186"
     },
     {
       "name": "BERLIN 16 MODULAR PLATE  DARK WOOD 16M",
       "category": "Plate",
-      "qty": 95,
+      "qty": 94,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016T",
-      "location": "other"
+      "location": "Shelf No. 185"
     },
     {
       "name": "BERLIN 18 MODULAR PLATE  DARK WOOD 18M",
       "category": "Plate",
-      "qty": 260,
+      "qty": 0,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018T",
-      "location": "other"
+      "location": "Shelf No. 184"
     },
     {
       "name": "ROME 1 MODULAR PLATE GREY 1M",
       "category": "Plate",
-      "qty": 700,
+      "qty": 380,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001T",
-      "location": "other"
+      "location": "Rack No. 158"
     },
     {
       "name": "ROME 2 MODULAR PLATE GREY 2M",
       "category": "Plate",
-      "qty": 167,
+      "qty": 1156,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE2002T",
-      "location": "other"
+      "location": "Rack No. 157"
     },
     {
       "name": "ROME 3 MODULAR PLATE GREY 3M",
       "category": "Plate",
-      "qty": 467,
+      "qty": 950,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003T",
-      "location": "other"
+      "location": "Rack No. 156"
     },
     {
       "name": "ROME 4 MODULAR PLATE GREY 4M",
       "category": "Plate",
-      "qty": 518,
+      "qty": 890,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004T",
-      "location": "other"
+      "location": "Rack No. 155"
     },
     {
       "name": "ROME 6 MODULAR PLATE GREY 6M",
       "category": "Plate",
-      "qty": 460,
+      "qty": 713,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006T",
-      "location": "other"
+      "location": "Rack No. 154"
     },
     {
       "name": "ROME 8Hz MODULAR PLATE GREY 8M",
       "category": "Plate",
-      "qty": 340,
+      "qty": 650,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008T",
-      "location": "other"
+      "location": "Rack No. 162"
     },
     {
       "name": "ROME 8Sq MODULAR PLATE GREY 8M",
       "category": "Plate",
-      "qty": 279,
+      "qty": 600,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8088T",
-      "location": "other"
+      "location": "Rack No. 161"
     },
     {
       "name": "ROME  12 MODULAR PLATE GREY 12M",
       "category": "Plate",
-      "qty": 355,
+      "qty": 275,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012T",
-      "location": "other"
+      "location": "Rack No. 161"
     },
     {
       "name": "ROME 16 MODULAR PLATE GREY 16M",
       "category": "Plate",
-      "qty": 65,
+      "qty": 60,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016T",
-      "location": "other"
+      "location": "Rack No. 160"
     },
     {
       "name": "ROME 18 MODULAR PLATE GREY 18M",
       "category": "Plate",
-      "qty": 15,
+      "qty": 135,
       "unit": "Pcs",
       "minAlert": 100,
       "code": "BE18018T",
-      "location": "other"
+      "location": "Rack No. 159"
     },
     {
       "name": "ROME 1 MODULAR PLATE DARK WOOD 1M",
       "category": "Plate",
-      "qty": 560,
+      "qty": 520,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001T",
-      "location": "other"
+      "location": "Rack No. 148"
     },
     {
-      "name": "BE 2002T\tROME 2 MODULAR PLATE  DARK WOOD 2M",
+      "name": "ROME 2 MODULAR PLATE  DARK WOOD 2M",
       "category": "Plate",
-      "qty": 448,
+      "qty": 447,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE 2002T",
-      "location": "other"
+      "location": "Rack No. 147"
     },
     {
       "name": "ROME 3 MODULAR PLATE  DARK WOOD 3M",
       "category": "Plate",
-      "qty": 1078,
+      "qty": 1090,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003T",
-      "location": "other"
+      "location": "Rack No. 146"
     },
     {
       "name": "ROME 4 MODULAR PLATE  DARK WOOD 4M",
       "category": "Plate",
-      "qty": 828,
+      "qty": 620,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004T",
-      "location": "other"
+      "location": "Rack No. 145"
     },
     {
       "name": "ROME 6 MODULAR PLATE  DARK WOOD 6M",
       "category": "Plate",
       "qty": 498,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006T",
-      "location": "other"
+      "location": "Rack No. 144"
     },
     {
       "name": "ROME 8Hz MODULAR PLATE  DARK WOOD 8M",
       "category": "Plate",
       "qty": 490,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008T",
-      "location": "other"
+      "location": "Rack No. 152"
     },
     {
       "name": "ROME 8Sq MODULAR PLATE  DARK WOOD 8M",
       "category": "Plate",
-      "qty": 520,
+      "qty": 500,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8088T",
-      "location": "other"
+      "location": "Rack No. 151"
     },
     {
       "name": "ROME12 MODULAR PLATE  DARK WOOD 12M",
       "category": "Plate",
       "qty": 225,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012T",
-      "location": "other"
+      "location": "Rack No. 151"
     },
     {
       "name": "ROME 16 MODULAR PLATE  DARK WOOD 16M",
       "category": "Plate",
       "qty": 75,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016T",
-      "location": "other"
+      "location": "Rack No. 150"
     },
     {
       "name": "ROME 18 MODULAR PLATE  DARK WOOD 18M",
       "category": "Plate",
-      "qty": 70,
+      "qty": 73,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018T",
-      "location": "other"
+      "location": "Rack No. 149"
     },
     {
       "name": "ROME 1 MODULAR PLATE  WHITE 1M",
       "category": "Plate",
-      "qty": 1700,
+      "qty": 1120,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001G",
-      "location": "other"
+      "location": "Rack No. 178"
     },
     {
       "name": "ROME 2 MODULAR PLATE  WHITE 2M",
       "category": "Plate",
-      "qty": 1603,
+      "qty": 910,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE 2002G",
-      "location": "other"
+      "location": "Rack No. 177"
     },
     {
       "name": "ROME 3 MODULAR PLATE WHITE 3M",
       "category": "Plate",
-      "qty": 1378,
+      "qty": 1283,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE3003G",
-      "location": "other"
+      "location": "Rack No. 176"
     },
     {
       "name": "ROME 4 MODULAR PLATE  WHITE 4M",
       "category": "Plate",
       "qty": 1118,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004G",
-      "location": "other"
+      "location": "Rack No. 175"
     },
     {
       "name": "ROME 6 MODULAR PLATE   WHITE 6M",
       "category": "Plate",
-      "qty": 52,
+      "qty": 670,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006G",
-      "location": "other"
+      "location": "Rack No. 174"
     },
     {
       "name": "ROME  8Hz MODULE PLATE  WHITE 8M",
       "category": "Plate",
-      "qty": 530,
+      "qty": 516,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008G",
-      "location": "other"
+      "location": "Rack No. 182"
     },
     {
-      "name": "ROME  8Sq MODULE PLATE  WHITE 8M",
+      "name": "ROME 12 MODULE PLATE  WHITE 12M",
       "category": "Plate",
-      "qty": 274,
+      "qty": 370,
       "unit": "Pcs",
-      "minAlert": 500,
-      "code": "BE8088G",
-      "location": "other"
-    },
-    {
-      "name": "B\tROME 12 MODULE PLATE  WHITE 12M",
-      "category": "Plate",
-      "qty": 24,
-      "unit": "Pcs",
-      "minAlert": 500,
-      "code": "E12012G",
-      "location": "other"
+      "minAlert": 100,
+      "code": "BE12012G",
+      "location": "Rack No. 181"
     },
     {
       "name": "ROME 16 MODULE PLATE  WHITE 16M",
       "category": "Plate",
       "qty": 275,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016G",
-      "location": "other"
+      "location": "Rack No. 180"
     },
     {
       "name": "ROME 18 MODULE  PLATE  WHITE 18M",
       "category": "Plate",
       "qty": 245,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018G",
-      "location": "other"
+      "location": "Rack No. 179"
     },
     {
       "name": "ROME 1 MODULAR PLAT BLACK 1M",
       "category": "Plate",
       "qty": 1170,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE1001M",
-      "location": "other"
+      "location": "Rack No. 168"
     },
     {
       "name": "ROME 2 MODULAR PLATE BLACK 2M",
       "category": "Plate",
-      "qty": 1148,
+      "qty": 1454,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE2002M",
-      "location": "other"
+      "location": "Rack No. 167"
     },
     {
       "name": "ROME 3 MODULAR PLATE BLACK 3M",
       "category": "Plate",
-      "qty": 928,
+      "qty": 920,
       "unit": "Pcs",
-      "minAlert": 928,
+      "minAlert": 100,
       "code": "BE3003M",
-      "location": "other"
+      "location": "Rack No. 166"
     },
     {
       "name": "ROME 4 MODULAR PLATE  BLACK 4M",
       "category": "Plate",
-      "qty": 1128,
+      "qty": 634,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE4004M",
-      "location": "other"
+      "location": "Rack No. 165"
     },
     {
       "name": "ROME 6 MODULAR PLATE  BLACK 6M",
       "category": "Plate",
-      "qty": 458,
+      "qty": 454,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE6006M",
-      "location": "other"
+      "location": "Rack No. 164"
     },
     {
       "name": "ROME 8Hz MODULE PLATE  BLACK 8M",
       "category": "Plate",
-      "qty": 470,
+      "qty": 390,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE8008M",
-      "location": "0ther"
-    },
-    {
-      "name": "ROME 8Sq MODULE PLATE  BLACK 8M",
-      "category": "Plate",
-      "qty": 530,
-      "unit": "Pcs",
-      "minAlert": 500,
-      "code": "BE8088M",
-      "location": "Other"
+      "location": "Rack No. 172"
     },
     {
       "name": "ROME 12 MODULE PLATE  BLACK 12M",
       "category": "Plate",
-      "qty": 195,
+      "qty": 370,
       "unit": "Pcs",
-      "minAlert": 500,
+      "minAlert": 100,
       "code": "BE12012M",
-      "location": "other"
+      "location": "Rack No. 171"
     },
     {
       "name": "ROME 16 MODULE PLATE BLACK 16M",
       "category": "Plate",
-      "qty": 180,
+      "qty": 367,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE16016M",
-      "location": "other"
+      "location": "Rack No. 170"
     },
     {
       "name": "ROME 18 MODULE  PLATE  BLACK 18M",
       "category": "Plate",
-      "qty": 100,
+      "qty": 240,
       "unit": "Pcs",
-      "minAlert": 200,
+      "minAlert": 100,
       "code": "BE18018M",
-      "location": "other"
+      "location": "Rack No. 169"
     },
     {
       "name": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (WHITE)",
@@ -885,12 +867,12 @@
       "location": "other"
     },
     {
-      "name": "2008RI\tRIGA 32A. D.P SWITCH with indicator (2008RI) 2M (WHITE)",
+      "name": "RIGA 32A. D.P SWITCH with indicator (2008RI) 2M (WHITE)",
       "category": "Switch",
       "qty": 2040,
-      "unit": "Pcs",
+      "unit": "Box",
       "minAlert": 1400,
-      "code": "",
+      "code": "2008RI",
       "location": "other"
     },
     {
@@ -1616,7 +1598,7 @@
     {
       "name": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (WHITE)",
       "category": "Switch",
-      "qty": 55020,
+      "qty": 57160,
       "unit": "Box",
       "minAlert": 4200,
       "code": "1000RI",
@@ -1625,7 +1607,7 @@
     {
       "name": "LIVIA 10A. 1 WAY SWITCH (1000LI) 1M (WHITE)",
       "category": "Switch",
-      "qty": 26220,
+      "qty": 26880,
       "unit": "Box",
       "minAlert": 4200,
       "code": "1000LI",
@@ -1634,7 +1616,7 @@
     {
       "name": "LUNA 10A. 1 WAY SWITCH (1000LU) 1M (WHITE)",
       "category": "Switch",
-      "qty": 16840,
+      "qty": 18200,
       "unit": "Box",
       "minAlert": 4200,
       "code": "1000LU",
@@ -1697,8 +1679,8 @@
     {
       "name": "LIVIA 10A. 1 WAY SWITCH (1000LI) 1M (GREY)",
       "category": "Switch",
-      "qty": 1400,
-      "unit": "Pcs",
+      "qty": 2800,
+      "unit": "Box",
       "minAlert": 1400,
       "code": "1000LI",
       "location": "Floor column # 1"
@@ -1724,11 +1706,12 @@
     {
       "name": "ROMANIA  6A. S.P.TINY MCB GREY (5007SP)",
       "category": "MCB",
-      "qty": 210,
+      "qty": 90,
       "unit": "Pcs",
       "minAlert": 100,
       "code": "5007SP",
-      "location": "RACK NO."
+      "location": "RACK NO.",
+      "color": "#32c828"
     },
     {
       "name": "ROMANIA  10A.S.P. TINY MCB GREY (5007SP)",
@@ -1737,7 +1720,8 @@
       "unit": "Pcs",
       "minAlert": 100,
       "code": "5007SP",
-      "location": "RACK NO."
+      "location": "RACK NO.",
+      "color": "#38d723"
     },
     {
       "name": "ROMANIA  16A. S.P. TINY MCB GREY (5007SP)",
@@ -1746,7 +1730,8 @@
       "unit": "Pcs",
       "minAlert": 100,
       "code": "5007SP",
-      "location": "Rack "
+      "location": "Rack ",
+      "color": "#6fd02f"
     },
     {
       "name": "ROMANIA  20A. S.P. TINY MCB GREY (5007SP)",
@@ -1755,7 +1740,8 @@
       "unit": "Pcs",
       "minAlert": 100,
       "code": "5007SP",
-      "location": "Rack "
+      "location": "Rack ",
+      "color": "#c1e123"
     },
     {
       "name": "ROMANIA  25A. S.P. TINY MCB GREY (5007SP)",
@@ -1764,7 +1750,8 @@
       "unit": "Pcs",
       "minAlert": 100,
       "code": "5007SP",
-      "location": "Rack "
+      "location": "Rack ",
+      "color": "#67dd27"
     },
     {
       "name": "ROMANIA 32A. S.P. TINY MCB GREY (5007SP)",
@@ -1773,7 +1760,8 @@
       "unit": "Pcs",
       "minAlert": 100,
       "code": "5007SP",
-      "location": "Rack "
+      "location": "Rack ",
+      "color": "#22d366"
     },
     {
       "name": "ROMANIA  6A. S.P. TINY MCB BLACK (5007SP)",
@@ -2152,6 +2140,538 @@
       "minAlert": 50,
       "code": "ISDP03",
       "location": "Rack "
+    },
+    {
+      "name": "ROMANIA 6A. 3 PIN SOCKET WHITE (2001UN)",
+      "category": "Accessory",
+      "qty": 700,
+      "unit": "Box",
+      "minAlert": 1400,
+      "code": "2001UN",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA 6A. INDICATOR WHITE (3001AC)",
+      "category": "Accessory",
+      "qty": 160,
+      "unit": "Box",
+      "minAlert": 1400,
+      "code": "3001AC",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA 6A. INDICATOR GREY (3001AC)",
+      "category": "Accessory",
+      "qty": 1180,
+      "unit": "Box",
+      "minAlert": 1400,
+      "code": "3001AC",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA USB CHARGER GREY   (2 PORTS) (3008AC)",
+      "category": "Accessory",
+      "qty": 30,
+      "unit": "Box",
+      "minAlert": 700,
+      "code": "3008AC",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA 6A. 3 PIN SOCKET GREY (2001UN)",
+      "category": "MCB",
+      "qty": 700,
+      "unit": "Box",
+      "minAlert": 700,
+      "code": "2001UN",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA 6A. 2 IN 1 SOCKET WHITE (2002UN)",
+      "category": "Accessory",
+      "qty": 700,
+      "unit": "Box",
+      "minAlert": 700,
+      "code": "2002UN",
+      "location": "Floor"
+    },
+    {
+      "name": "RIGA 32A. D.P SWITCH with indicator (2008RI) 2M (WHITE)",
+      "category": "Switch",
+      "qty": 400,
+      "unit": "Box",
+      "minAlert": 400,
+      "code": "2008RI",
+      "location": "Floor"
+    },
+    {
+      "name": "LIVIA 10A. BELL PUSH (1003LI) 1M (GREY)",
+      "category": "Switch",
+      "qty": 400,
+      "unit": "Box",
+      "minAlert": 400,
+      "code": "1003LI",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA MINI DIMMMER GREY 1M (3007RE)",
+      "category": "Accessory",
+      "qty": 590,
+      "unit": "Box",
+      "minAlert": 590,
+      "code": "3007RE",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA 6A. INDICATOR BLACK (3001AC)",
+      "category": "Accessory",
+      "qty": 220,
+      "unit": "Box",
+      "minAlert": 700,
+      "code": "3001AC",
+      "location": "Floor"
+    },
+    {
+      "name": "RIGA 20A. 1 WAY SWITCH (1005RI) 1M (GREY)",
+      "category": "Switch",
+      "qty": 1400,
+      "unit": "Box",
+      "minAlert": 1400,
+      "code": "1005RI",
+      "location": "Floor"
+    },
+    {
+      "name": "LUNA 20A. 2 WAY SWITCH   (1007LU) 1M (GREY)",
+      "category": "Switch",
+      "qty": 1300,
+      "unit": "Box",
+      "minAlert": 1300,
+      "code": "1007LU",
+      "location": "Floor"
+    },
+    {
+      "name": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (GREY)",
+      "category": "Switch",
+      "qty": 4200,
+      "unit": "Box",
+      "minAlert": 1400,
+      "code": "1000RI",
+      "location": "Floor"
+    },
+    {
+      "name": "RIGA 20A. 1 WAY SWITCH (1005RI) 1M (GREY)",
+      "category": "Switch",
+      "qty": 1400,
+      "unit": "Box",
+      "minAlert": 1200,
+      "code": "1005RI",
+      "location": "Floor"
+    },
+    {
+      "name": "LUNA 20A. 1 WAY SWITCH (1005LU) 1M (GREY)",
+      "category": "Switch",
+      "qty": 1200,
+      "unit": "Box",
+      "minAlert": 1200,
+      "code": "1005LU",
+      "location": "Floor"
+    },
+    {
+      "name": "ROMANIA 6A. 2 IN 1 SOCKET GREY (2002UN)",
+      "category": "Accessory",
+      "qty": 100,
+      "unit": "Box",
+      "minAlert": 100,
+      "code": "2002UN",
+      "location": "Floor"
+    },
+    {
+      "name": "PLUTO PLATE 1M (PLU1001G) WHITE",
+      "category": "Plate",
+      "qty": 400,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU1001G",
+      "location": "Rack N0. 118",
+      "color": "#2769d3"
+    },
+    {
+      "name": "PLUTO PLATE 2M (PLU2002G) WHITE",
+      "category": "Plate",
+      "qty": 87,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU2002G",
+      "location": "Rack No. 117"
+    },
+    {
+      "name": "PLUTO PLATE 3M (PLU3003G) WHITE",
+      "category": "Plate",
+      "qty": 929,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU3003G",
+      "location": "Rack No. 116"
+    },
+    {
+      "name": "PLUTO PLATE 4M (PLU4004G) WHITE",
+      "category": "Plate",
+      "qty": 499,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU4004G",
+      "location": "Rack No. 115"
+    },
+    {
+      "name": "PLUTO PLATE 6M (PLU6006G) WHITE",
+      "category": "Plate",
+      "qty": 640,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU6006G",
+      "location": "Rack No. 114"
+    },
+    {
+      "name": "PLUTO PLATE 8M (H) (PLU8008G) WHITE",
+      "category": "Plate",
+      "qty": 220,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8008G",
+      "location": "Rack No. 122"
+    },
+    {
+      "name": "PLUTO PLATE 8M (S) (PLU8088G) WHITE",
+      "category": "Plate",
+      "qty": 290,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8088G",
+      "location": "Rack No. 123"
+    },
+    {
+      "name": "PLUTO PLATE 12M (PLU12012G) WHITE",
+      "category": "Plate",
+      "qty": 289,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU12012G",
+      "location": "Rack No. 121"
+    },
+    {
+      "name": "PLUTO PLATE 16M (PLU16016G) WHITE",
+      "category": "Plate",
+      "qty": 260,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU16016G",
+      "location": "Rack No. 120"
+    },
+    {
+      "name": "PLUTO PLATE 18M (PLU8018G) WHITE",
+      "category": "Plate",
+      "qty": 213,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU18018G",
+      "location": "Rack No. 119"
+    },
+    {
+      "name": "PLUTO PLATE 6M (PLU6006M) BLACK",
+      "category": "Plate",
+      "qty": 443,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU6006M",
+      "location": "Rack No. 124"
+    },
+    {
+      "name": "PLUTO PLATE 4M (PLU4004M) BLACK",
+      "category": "Plate",
+      "qty": 1130,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU4004M",
+      "location": "Rack No. 125"
+    },
+    {
+      "name": "PLUTO PLATE 3M (PLU3003M) BLACK",
+      "category": "Plate",
+      "qty": 1129,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU3003M",
+      "location": "Rack No. 126"
+    },
+    {
+      "name": "PLUTO PLATE 2M (PLU2002M) BLACK",
+      "category": "Plate",
+      "qty": 610,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU2002M",
+      "location": "Rack No. 127"
+    },
+    {
+      "name": "PLUTO PLATE 1M (PLU1001M) BLACK",
+      "category": "Plate",
+      "qty": 480,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU1001M",
+      "location": "Rack No. 129"
+    },
+    {
+      "name": "PLUTO PLATE 18M (PLU8018M) BLACK",
+      "category": "Plate",
+      "qty": 210,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU18018M",
+      "location": "Rack No. 130"
+    },
+    {
+      "name": "PLUTO PLATE 16M (PLU16016M) BLACK",
+      "category": "Plate",
+      "qty": 265,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU16016M",
+      "location": "Rack No. 131"
+    },
+    {
+      "name": "PLUTO PLATE 12M (PLU12012M) BLACK",
+      "category": "Plate",
+      "qty": 135,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU12012M",
+      "location": "Rack No. 132"
+    },
+    {
+      "name": "PLUTO PLATE 8M (H) (PLU8008M) BLACK",
+      "category": "Plate",
+      "qty": 490,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8008M",
+      "location": "Rack No. 133"
+    },
+    {
+      "name": "PLUTO PLATE 8M (S) (PLU8088M) BLACK",
+      "category": "Plate",
+      "qty": 380,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8088M",
+      "location": "Rack No. 134"
+    },
+    {
+      "name": "PLUTO PLATE 16M (PLU16016T)GREY",
+      "category": "Plate",
+      "qty": 168,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU16016T",
+      "location": "Rack No."
+    },
+    {
+      "name": "PLUTO PLATE 6M (PLU6006T) GREY",
+      "category": "Plate",
+      "qty": 540,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU6006T",
+      "location": "Rack No. 135"
+    },
+    {
+      "name": "PLUTO PLATE 4M (PLU4004T) GREY",
+      "category": "Plate",
+      "qty": 572,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU4004T",
+      "location": "Rack No. 136"
+    },
+    {
+      "name": "PLUTO PLATE 3M (PLU3003T) GREY",
+      "category": "Plate",
+      "qty": 480,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU3003T",
+      "location": "Rack No. 137"
+    },
+    {
+      "name": "PLUTO PLATE 2M (PLU2002T) GREY",
+      "category": "Plate",
+      "qty": 100,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU2002T",
+      "location": "Rack No. 138"
+    },
+    {
+      "name": "PLUTO PLATE 1M (PLU1001T) GREY",
+      "category": "Plate",
+      "qty": 420,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU1001T",
+      "location": "Rack No. 139"
+    },
+    {
+      "name": "PLUTO PLATE 18M (PLU8018T) GREY",
+      "category": "Plate",
+      "qty": 85,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU18018T",
+      "location": "Rack No. 140"
+    },
+    {
+      "name": "PLUTO PLATE 16M (PLU16016T)GREY",
+      "category": "Plate",
+      "qty": 168,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU16016T",
+      "location": "Rack No. xx"
+    },
+    {
+      "name": "PLUTO PLATE 12M (PLU12012T) GREY",
+      "category": "Plate",
+      "qty": 290,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU12012T",
+      "location": "Rack No. 141"
+    },
+    {
+      "name": "PLUTO PLATE 8M (H) (PLU8008T) GREY",
+      "category": "Plate",
+      "qty": 390,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8008T",
+      "location": "Rack No. 142"
+    },
+    {
+      "name": "PLUTO PLATE 8M (S) (PLU8088T) GREY",
+      "category": "Plate",
+      "qty": 360,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8088T",
+      "location": "Rack No. 143"
+    },
+    {
+      "name": "PLUTO PLATE 6M (PLU6006T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 37,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU6006T",
+      "location": "Shelf No.135"
+    },
+    {
+      "name": "PLUTO PLATE 4M (PLU4004T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 50,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU4004T",
+      "location": "Shelf No.136"
+    },
+    {
+      "name": "PLUTO PLATE 3M (PLU3003T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 114,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU3003T",
+      "location": "Shelf No. 137"
+    },
+    {
+      "name": "PLUTO PLATE 2M (PLU2002T) FOREST WOOD",
+      "category": "Plate",
+      "qty": 270,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU2002T",
+      "location": "Shelf No. 138"
+    },
+    {
+      "name": "PLUTO PLATE 1M (PLU1001T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 170,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU1001T",
+      "location": "Shelf No. 139"
+    },
+    {
+      "name": "PLUTO PLATE 18M (PLU8018T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 50,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU18018T",
+      "location": "Shelf No. 140"
+    },
+    {
+      "name": "PLUTO PLATE 16M (PLU16016T) FOREST WOOD",
+      "category": "Plate",
+      "qty": 0,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU16016T",
+      "location": "Shelf No. xx"
+    },
+    {
+      "name": "PLUTO PLATE 12M (PLU12012T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 0,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU12012T",
+      "location": "Shelf No. 141"
+    },
+    {
+      "name": "PLUTO PLATE 8M (H) (PLU8008T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 130,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8008T",
+      "location": "Shelf No. 142"
+    },
+    {
+      "name": "PLUTO PLATE 8M (S) (PLU8088T)FOREST WOOD",
+      "category": "Plate",
+      "qty": 90,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "PLU8088T",
+      "location": "Shelf No. 143"
+    },
+    {
+      "name": "ROME 8Sq MODULE PLATE  BLACK 8M",
+      "category": "Plate",
+      "qty": 534,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "BE8088M",
+      "location": "Rack No. 173"
+    },
+    {
+      "name": "ROME  8Sq MODULE PLATE  WHITE 8M",
+      "category": "Plate",
+      "qty": 340,
+      "unit": "Pcs",
+      "minAlert": 100,
+      "code": "BE8088G",
+      "location": "Rack No. 183"
     }
   ],
   "stockHistory": [
@@ -4065,6 +4585,1279 @@
       "type": "IN",
       "qty": 0,
       "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. 3 PIN SOCKET WHITE (2001UN)",
+      "type": "IN",
+      "qty": 700,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. INDICATOR WHITE (3001AC)",
+      "type": "IN",
+      "qty": 160,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. INDICATOR GREY (3001AC)",
+      "type": "IN",
+      "qty": 1180,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA USB CHARGER GREY   (2 PORTS) (3008AC)",
+      "type": "IN",
+      "qty": 30,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. 3 PIN SOCKET GREY (2001UN)",
+      "type": "IN",
+      "qty": 700,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "LIVIA 10A. 1 WAY SWITCH (1000LI) 1M (WHITE)",
+      "type": "IN",
+      "qty": 660,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (WHITE)",
+      "type": "IN",
+      "qty": 740,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. 2 IN 1 SOCKET WHITE (2002UN)",
+      "type": "IN",
+      "qty": 700,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 32A. D.P SWITCH with indicator (2008RI) 2M (WHITE)",
+      "type": "IN",
+      "qty": 400,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "LIVIA 10A. BELL PUSH (1003LI) 1M (GREY)",
+      "type": "IN",
+      "qty": 400,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA MINI DIMMMER GREY 1M (3007RE)",
+      "type": "IN",
+      "qty": 590,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. INDICATOR BLACK (3001AC)",
+      "type": "IN",
+      "qty": 220,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "LUNA 10A. 1 WAY SWITCH (1000LU) 1M (WHITE)",
+      "type": "IN",
+      "qty": 1360,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (WHITE)",
+      "type": "IN",
+      "qty": 1400,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 20A. 1 WAY SWITCH (1005RI) 1M (GREY)",
+      "type": "IN",
+      "qty": 1400,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "LUNA 20A. 2 WAY SWITCH   (1007LU) 1M (GREY)",
+      "type": "IN",
+      "qty": 1300,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "LIVIA 10A. 1 WAY SWITCH (1000LI) 1M (GREY)",
+      "type": "IN",
+      "qty": 1400,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (GREY)",
+      "type": "IN",
+      "qty": 1400,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 20A. 1 WAY SWITCH (1005RI) 1M (GREY)",
+      "type": "IN",
+      "qty": 1200,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 20A. 1 WAY SWITCH (1005RI) 1M (GREY)",
+      "type": "IN",
+      "qty": 200,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "RIGA 10A. 1 WAY SWITCH (1000RI) 1M (GREY)",
+      "type": "IN",
+      "qty": 2800,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "LUNA 20A. 1 WAY SWITCH (1005LU) 1M (GREY)",
+      "type": "IN",
+      "qty": 1200,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-04",
+      "item": "ROMANIA 6A. 2 IN 1 SOCKET GREY (2002UN)",
+      "type": "IN",
+      "qty": 100,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-09",
+      "item": "ROMANIA  6A. S.P.TINY MCB GREY (5007SP)",
+      "location": "RACK NO.",
+      "type": "OUT",
+      "qty": 120,
+      "reason": "Order - jeetu ji",
+      "before": 210,
+      "after": 90
+    },
+    {
+      "date": "2026-06-09",
+      "item": "BERLIN 1 MODULAR PLATE  WHITE 1M",
+      "location": "other",
+      "type": "OUT",
+      "qty": 2045,
+      "reason": "Order - jeetu",
+      "before": 4045,
+      "after": 2000
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 1M (PLU1001G) WHITE",
+      "type": "IN",
+      "qty": 400,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 2M (PLU2002G) WHITE",
+      "location": "Rack No. 117",
+      "type": "IN",
+      "qty": 87,
+      "reason": "New stock",
+      "before": 0,
+      "after": 87
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 3M (PLU3003G) WHITE",
+      "location": "Rack No. 116",
+      "type": "IN",
+      "qty": 929,
+      "reason": "New stock",
+      "before": 0,
+      "after": 929
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 4M (PLU4004G) WHITE",
+      "location": "Rack No. 115",
+      "type": "IN",
+      "qty": 499,
+      "reason": "New stock",
+      "before": 0,
+      "after": 499
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 6M (PLU6006G) WHITE",
+      "location": "Rack No. 114",
+      "type": "IN",
+      "qty": 640,
+      "reason": "New stock",
+      "before": 0,
+      "after": 640
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 8M (H) (PLU8008G) WHITE",
+      "location": "Rack No. 122",
+      "type": "IN",
+      "qty": 220,
+      "reason": "New stock",
+      "before": 0,
+      "after": 220
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 8M (S) (PLU8088G) WHITE",
+      "location": "Rack No. 123",
+      "type": "IN",
+      "qty": 290,
+      "reason": "New stock",
+      "before": 0,
+      "after": 290
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 12M (PLU12012G) WHITE",
+      "location": "Rack No. 121",
+      "type": "IN",
+      "qty": 289,
+      "reason": "New stock",
+      "before": 0,
+      "after": 289
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 16M (PLU16016G) WHITE",
+      "location": "Rack No. 120",
+      "type": "IN",
+      "qty": 260,
+      "reason": "New stock",
+      "before": 0,
+      "after": 260
+    },
+    {
+      "date": "2026-06-09",
+      "item": "PLUTO PLATE 18M (PLU8018G) WHITE",
+      "location": "Rack No. 119",
+      "type": "IN",
+      "qty": 213,
+      "reason": "New stock",
+      "before": 0,
+      "after": 213
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 6M (PLU6006M) BLACK",
+      "location": "Rack No. 124",
+      "type": "IN",
+      "qty": 443,
+      "reason": "New stock",
+      "before": 0,
+      "after": 443
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 4M (PLU4004M) BLACK",
+      "location": "Rack No. 125",
+      "type": "IN",
+      "qty": 1130,
+      "reason": "New stock",
+      "before": 0,
+      "after": 1130
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 3M (PLU3003M) BLACK",
+      "location": "Rack No. 126",
+      "type": "IN",
+      "qty": 1129,
+      "reason": "New stock",
+      "before": 0,
+      "after": 1129
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 2M (PLU2002M) BLACK",
+      "location": "Rack No. 127",
+      "type": "IN",
+      "qty": 610,
+      "reason": "New stock",
+      "before": 0,
+      "after": 610
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 1M (PLU1001M) BLACK",
+      "location": "Rack No. 129",
+      "type": "IN",
+      "qty": 480,
+      "reason": "New stock",
+      "before": 0,
+      "after": 480
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 18M (PLU8018M) BLACK",
+      "location": "Rack No. 130",
+      "type": "IN",
+      "qty": 210,
+      "reason": "New stock",
+      "before": 0,
+      "after": 210
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 16M (PLU16016M) BLACK",
+      "location": "Rack No. 131",
+      "type": "IN",
+      "qty": 265,
+      "reason": "New stock",
+      "before": 0,
+      "after": 265
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 12M (PLU12012M) BLACK",
+      "location": "Rack No. 132",
+      "type": "IN",
+      "qty": 135,
+      "reason": "New stock",
+      "before": 0,
+      "after": 135
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 8M (H) (PLU8008M) BLACK",
+      "location": "Rack No. 133",
+      "type": "IN",
+      "qty": 490,
+      "reason": "New stock",
+      "before": 0,
+      "after": 490
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 8M (S) (PLU8088M) BLACK",
+      "location": "Rack No. 134",
+      "type": "IN",
+      "qty": 380,
+      "reason": "New stock",
+      "before": 0,
+      "after": 380
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 18M (PLU8018T) GREY",
+      "location": "Rack No. 140",
+      "type": "IN",
+      "qty": 85,
+      "reason": "New stock",
+      "before": 0,
+      "after": 85
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 16M (PLU16016T)GREY",
+      "location": "Rack No.",
+      "type": "IN",
+      "qty": 168,
+      "reason": "New stock",
+      "before": 0,
+      "after": 168
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 12M (PLU12012T) GREY",
+      "location": "Rack No. 141",
+      "type": "IN",
+      "qty": 290,
+      "reason": "New stock",
+      "before": 0,
+      "after": 290
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 6M (PLU6006T) GREY",
+      "location": "Rack No. 135",
+      "type": "IN",
+      "qty": 540,
+      "reason": "New stock",
+      "before": 0,
+      "after": 540
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 4M (PLU4004T) GREY",
+      "location": "Rack No. 136",
+      "type": "IN",
+      "qty": 572,
+      "reason": "New stock",
+      "before": 0,
+      "after": 572
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 3M (PLU3003T) GREY",
+      "location": "Rack No. 137",
+      "type": "IN",
+      "qty": 480,
+      "reason": "New stock",
+      "before": 0,
+      "after": 480
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 2M (PLU2002T) GREY",
+      "location": "Rack No. 138",
+      "type": "IN",
+      "qty": 100,
+      "reason": "New stock",
+      "before": 0,
+      "after": 100
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 1M (PLU1001T) GREY",
+      "location": "Rack No. 139",
+      "type": "IN",
+      "qty": 420,
+      "reason": "New stock",
+      "before": 0,
+      "after": 420
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 18M (PLU8018T) GREY",
+      "location": "Rack No. 140",
+      "type": "IN",
+      "qty": 85,
+      "reason": "New stock",
+      "before": 0,
+      "after": 85
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 16M (PLU16016T)GREY",
+      "location": "Rack No. xx",
+      "type": "IN",
+      "qty": 168,
+      "reason": "New stock",
+      "before": 0,
+      "after": 168
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 12M (PLU12012T) GREY",
+      "location": "Rack No. 141",
+      "type": "IN",
+      "qty": 290,
+      "reason": "New stock",
+      "before": 0,
+      "after": 290
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 8M (H) (PLU8008T) GREY",
+      "location": "Rack No. 142",
+      "type": "IN",
+      "qty": 390,
+      "reason": "New stock",
+      "before": 0,
+      "after": 390
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 8M (S) (PLU8088T) GREY",
+      "location": "Rack No. 143",
+      "type": "IN",
+      "qty": 360,
+      "reason": "New stock",
+      "before": 0,
+      "after": 360
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 6M (PLU6006T)FOREST WOOD",
+      "location": "Shelf No.135",
+      "type": "IN",
+      "qty": 37,
+      "reason": "New stock",
+      "before": 0,
+      "after": 37
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 4M (PLU4004T)FOREST WOOD",
+      "location": "Shelf No.136",
+      "type": "IN",
+      "qty": 50,
+      "reason": "New stock",
+      "before": 0,
+      "after": 50
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 3M (PLU3003T) GREY",
+      "location": "Shelf No. 137",
+      "type": "IN",
+      "qty": 114,
+      "reason": "New stock",
+      "before": 0,
+      "after": 114
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 2M (PLU2002T) GREY",
+      "location": "Shelf No.138",
+      "type": "IN",
+      "qty": 270,
+      "reason": "New stock",
+      "before": 0,
+      "after": 270
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 1M (PLU1001T) GREY",
+      "location": "Shelf No. 139",
+      "type": "IN",
+      "qty": 170,
+      "reason": "New stock",
+      "before": 0,
+      "after": 170
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 18M (PLU8018T) GREY",
+      "location": "Shelf No. 140",
+      "type": "IN",
+      "qty": 50,
+      "reason": "New stock",
+      "before": 0,
+      "after": 50
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 3M (PLU3003T)FOREST WOOD",
+      "location": "Shelf No. 137",
+      "type": "IN",
+      "qty": 114,
+      "reason": "New stock",
+      "before": 0,
+      "after": 114
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 2M (PLU2002T) FOREST WOOD",
+      "location": "Shelf No. 138",
+      "type": "IN",
+      "qty": 270,
+      "reason": "New stock",
+      "before": 0,
+      "after": 270
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 1M (PLU1001T)FOREST WOOD",
+      "location": "Shelf No. 139",
+      "type": "IN",
+      "qty": 170,
+      "reason": "New stock",
+      "before": 0,
+      "after": 170
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 18M (PLU8018T)FOREST WOOD",
+      "location": "Shelf No. 140",
+      "type": "IN",
+      "qty": 50,
+      "reason": "New stock",
+      "before": 0,
+      "after": 50
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 16M (PLU16016T) FOREST WOOD",
+      "location": "Shelf No. xx",
+      "type": "IN",
+      "qty": 0,
+      "reason": "New stock",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 12M (PLU12012T)FOREST WOOD",
+      "location": "Shelf No. 141",
+      "type": "IN",
+      "qty": 0,
+      "reason": "New stock",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 8M (H) (PLU8008T)FOREST WOOD",
+      "location": "Shelf No. 142",
+      "type": "IN",
+      "qty": 130,
+      "reason": "New stock",
+      "before": 0,
+      "after": 130
+    },
+    {
+      "date": "2026-06-10",
+      "item": "PLUTO PLATE 8M (S) (PLU8088T)FOREST WOOD",
+      "location": "Shelf No. 143",
+      "type": "IN",
+      "qty": 90,
+      "reason": "New stock",
+      "before": 0,
+      "after": 90
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 6 MODULAR PLATE  DARK WOOD 6M",
+      "location": "Rack No. 144",
+      "type": "IN",
+      "qty": 500,
+      "reason": "New stock",
+      "before": 0,
+      "after": 500
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 4 MODULAR PLATE  DARK WOOD 4M",
+      "location": "Rack No. 145",
+      "type": "ADJ",
+      "qty": 208,
+      "reason": "Manual",
+      "before": 828,
+      "after": 620
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 1 MODULAR PLATE DARK WOOD 1M",
+      "location": "Rack No. 148",
+      "type": "ADJ",
+      "qty": 40,
+      "reason": "Manual",
+      "before": 560,
+      "after": 520
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 2 MODULAR PLATE  DARK WOOD 2M",
+      "location": "Rack No. 147",
+      "type": "ADJ",
+      "qty": 1,
+      "reason": "Manual",
+      "before": 448,
+      "after": 447
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 3 MODULAR PLATE  DARK WOOD 3M",
+      "location": "Rack No. 146",
+      "type": "IN",
+      "qty": 12,
+      "reason": "Manual",
+      "before": 1078,
+      "after": 1090
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 8Sq MODULAR PLATE  DARK WOOD 8M",
+      "location": "Rack No. 151",
+      "type": "ADJ",
+      "qty": 20,
+      "reason": "Manual",
+      "before": 520,
+      "after": 500
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 18 MODULAR PLATE  DARK WOOD 18M",
+      "location": "Rack No. 149",
+      "type": "IN",
+      "qty": 3,
+      "reason": "Manual",
+      "before": 70,
+      "after": 73
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 1 MODULAR PLATE GREY 1M",
+      "location": "Rack No. 158",
+      "type": "ADJ",
+      "qty": 320,
+      "reason": "Manual",
+      "before": 700,
+      "after": 380
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 2 MODULAR PLATE GREY 2M",
+      "location": "Rack No. 157",
+      "type": "IN",
+      "qty": 989,
+      "reason": "Manual",
+      "before": 167,
+      "after": 1156
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 3 MODULAR PLATE GREY 3M",
+      "location": "Rack No. 156",
+      "type": "IN",
+      "qty": 483,
+      "reason": "Manual",
+      "before": 467,
+      "after": 950
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 4 MODULAR PLATE GREY 4M",
+      "location": "Rack No. 155",
+      "type": "IN",
+      "qty": 372,
+      "reason": "Manual",
+      "before": 518,
+      "after": 890
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 6 MODULAR PLATE GREY 6M",
+      "location": "Rack No. 154",
+      "type": "IN",
+      "qty": 253,
+      "reason": "Manual",
+      "before": 460,
+      "after": 713
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 8Sq MODULAR PLATE GREY 8M",
+      "location": "Rack No. 161",
+      "type": "IN",
+      "qty": 321,
+      "reason": "Manual",
+      "before": 279,
+      "after": 600
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 8Hz MODULAR PLATE GREY 8M",
+      "location": "Rack No. 162",
+      "type": "IN",
+      "qty": 310,
+      "reason": "Manual",
+      "before": 340,
+      "after": 650
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME  12 MODULAR PLATE GREY 12M",
+      "location": "Rack No. 161",
+      "type": "ADJ",
+      "qty": 80,
+      "reason": "Manual",
+      "before": 355,
+      "after": 275
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 16 MODULAR PLATE GREY 16M",
+      "location": "Rack No. 160",
+      "type": "ADJ",
+      "qty": 5,
+      "reason": "Manual",
+      "before": 65,
+      "after": 60
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 18 MODULAR PLATE GREY 18M",
+      "location": "Rack No. 159",
+      "type": "IN",
+      "qty": 120,
+      "reason": "Manual",
+      "before": 15,
+      "after": 135
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 2 MODULAR PLATE BLACK 2M",
+      "location": "Rack No. 167",
+      "type": "IN",
+      "qty": 306,
+      "reason": "Manual",
+      "before": 1148,
+      "after": 1454
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 3 MODULAR PLATE BLACK 3M",
+      "location": "Rack No. 166",
+      "type": "ADJ",
+      "qty": 8,
+      "reason": "Manual",
+      "before": 928,
+      "after": 920
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 4 MODULAR PLATE  BLACK 4M",
+      "location": "Rack No. 165",
+      "type": "ADJ",
+      "qty": 494,
+      "reason": "Manual",
+      "before": 1128,
+      "after": 634
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 6 MODULAR PLATE  BLACK 6M",
+      "location": "Rack No. 454",
+      "type": "ADJ",
+      "qty": 4,
+      "reason": "Manual",
+      "before": 458,
+      "after": 454
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME  8Sq MODULE PLATE  WHITE 8M",
+      "location": "Rack No. 173",
+      "type": "IN",
+      "qty": 260,
+      "reason": "Manual",
+      "before": 274,
+      "after": 534
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 8Hz MODULE PLATE  BLACK 8M",
+      "location": "Rack No. 172",
+      "type": "ADJ",
+      "qty": 80,
+      "reason": "Manual",
+      "before": 470,
+      "after": 390
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 12 MODULE PLATE  BLACK 12M",
+      "location": "Rack No. 171",
+      "type": "IN",
+      "qty": 175,
+      "reason": "Manual",
+      "before": 195,
+      "after": 370
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 16 MODULE PLATE BLACK 16M",
+      "location": "Rack No. 170",
+      "type": "IN",
+      "qty": 187,
+      "reason": "Manual",
+      "before": 180,
+      "after": 367
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 18 MODULE  PLATE  BLACK 18M",
+      "location": "Rack No. 169",
+      "type": "IN",
+      "qty": 140,
+      "reason": "Manual",
+      "before": 100,
+      "after": 240
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 1 MODULAR PLATE  WHITE 1M",
+      "location": "Rack No. 178",
+      "type": "ADJ",
+      "qty": 580,
+      "reason": "Manual",
+      "before": 1700,
+      "after": 1120
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 2 MODULAR PLATE  WHITE 2M",
+      "location": "Rack No. 177",
+      "type": "ADJ",
+      "qty": 693,
+      "reason": "Manual",
+      "before": 1603,
+      "after": 910
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 3 MODULAR PLATE WHITE 3M",
+      "location": "Rack No. 176",
+      "type": "ADJ",
+      "qty": 95,
+      "reason": "Manual",
+      "before": 1378,
+      "after": 1283
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 6 MODULAR PLATE   WHITE 6M",
+      "location": "Rack No. 174",
+      "type": "IN",
+      "qty": 618,
+      "reason": "Manual",
+      "before": 52,
+      "after": 670
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME  8Hz MODULE PLATE  WHITE 8M",
+      "location": "Rack No. 182",
+      "type": "ADJ",
+      "qty": 14,
+      "reason": "Manual",
+      "before": 530,
+      "after": 516
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 8Sq MODULE PLATE  BLACK 8M",
+      "type": "IN",
+      "qty": 534,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME  8Sq MODULE PLATE  WHITE 8M",
+      "type": "IN",
+      "qty": 340,
+      "reason": "New stock"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "ROME 12 MODULE PLATE  WHITE 12M",
+      "type": "IN",
+      "qty": 346,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 1 MODULAR PLATE  WHITE 1M",
+      "type": "ADJ",
+      "qty": 710,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 2 MODULAR PLATE  WHITE 2M",
+      "type": "ADJ",
+      "qty": 328,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 3 MODULAR PLATE  WHITE 3M",
+      "type": "ADJ",
+      "qty": 3091,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 4 MODULAR PLATE  WHITE 4M",
+      "type": "ADJ",
+      "qty": 1845,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 6 MODULAR PLATE   WHITE 6M",
+      "type": "ADJ",
+      "qty": 1361,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN  8Sq MODULE PLATE  WHITE 8M",
+      "type": "ADJ",
+      "qty": 2057,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 8Hz MODULE PLATE  WHITE 8M",
+      "type": "ADJ",
+      "qty": 2678,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 12 MODULE PLATE  WHITE 12M",
+      "type": "ADJ",
+      "qty": 5497,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 16 MODULE PLATE  WHITE 16M",
+      "type": "ADJ",
+      "qty": 1260,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 18 MODULE  PLATE  WHITE 18M",
+      "type": "ADJ",
+      "qty": 1689,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 1 MODULAR PLATE  BLACK 1M",
+      "type": "ADJ",
+      "qty": 2055,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 2 MODULAR PLATE  BLACK 2M",
+      "type": "ADJ",
+      "qty": 1330,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 3 MODULAR PLATE  BLACK 3M",
+      "type": "ADJ",
+      "qty": 1980,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN  4 MODULAR PLATE   BLACK 4M",
+      "type": "ADJ",
+      "qty": 4507,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 6 MODULAR PLATE   BLACK 6M",
+      "type": "ADJ",
+      "qty": 2644,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 8Hz MODULE PLATE  BLACK 8M",
+      "type": "ADJ",
+      "qty": 1590,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN  8Sq MODULE PLATE  BLACK 8M",
+      "type": "ADJ",
+      "qty": 1834,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 12 MODULE PLATE  BLACK 12M",
+      "type": "ADJ",
+      "qty": 3076,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 16 MODULE PLATE  BLACK 16M",
+      "type": "ADJ",
+      "qty": 525,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 12 MODULE PLATE  BLACK 12M",
+      "type": "IN",
+      "qty": 20,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-10",
+      "item": "BERLIN 18 MODULE  PLATE  BLACK 18M",
+      "type": "ADJ",
+      "qty": 3,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 1 MODULAR PLATE GREY 1M",
+      "type": "ADJ",
+      "qty": 10,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 2 MODULAR PLATE GREY 2M",
+      "type": "ADJ",
+      "qty": 206,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN  3 MODULAR PLATE GREY 3M",
+      "type": "ADJ",
+      "qty": 676,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN  4 MODULAR PLATE GREY 4M",
+      "type": "ADJ",
+      "qty": 1261,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 6 MODULAR PLATE GREY 6M",
+      "type": "ADJ",
+      "qty": 910,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 8Hz MODULAR PLATE GREY 8M (h)",
+      "type": "ADJ",
+      "qty": 1584,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN  8Sq MODULAR PLATE GREY 8M (s)",
+      "type": "ADJ",
+      "qty": 1078,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 12 MODULAR PLATE GREY 12M",
+      "type": "ADJ",
+      "qty": 1805,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 16 MODULAR PLATE GREY 16M",
+      "type": "ADJ",
+      "qty": 5,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 18 MODULAR PLATE GREY 18M",
+      "type": "ADJ",
+      "qty": 301,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN  1 MODULAR PLATE DARK WOOD 1M",
+      "type": "IN",
+      "qty": 10,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 2 MODULAR PLATE  DARK WOOD 2M",
+      "type": "ADJ",
+      "qty": 839,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 3 MODULAR PLATE  DARK WOOD 3M",
+      "type": "ADJ",
+      "qty": 714,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 4 MODULAR PLATE  DARK WOOD 4M",
+      "type": "ADJ",
+      "qty": 270,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 6 MODULAR PLATE  DARK WOOD 6M",
+      "type": "ADJ",
+      "qty": 300,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 8Hz MODULAR PLATE  DARK WOOD 8M",
+      "type": "ADJ",
+      "qty": 1140,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 8Sq MODULAR PLATE  DARK WOOD 8M",
+      "type": "ADJ",
+      "qty": 300,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 8Hz MODULAR PLATE  DARK WOOD 8M",
+      "type": "IN",
+      "qty": 136,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 12 MODULAR PLATE  DARK WOOD 12M",
+      "type": "ADJ",
+      "qty": 1046,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 16 MODULAR PLATE  DARK WOOD 16M",
+      "type": "ADJ",
+      "qty": 1,
+      "reason": "Manual"
+    },
+    {
+      "date": "2026-06-11",
+      "item": "BERLIN 18 MODULAR PLATE  DARK WOOD 18M",
+      "type": "ADJ",
+      "qty": 260,
+      "reason": "Manual"
     }
   ],
   "users": [
@@ -4078,13 +5871,6 @@
     {
       "name": "Staff User",
       "username": "staff",
-      "password": "[hidden]",
-      "role": "staff",
-      "active": true
-    },
-    {
-      "name": "ashwani",
-      "username": "oci123",
       "password": "[hidden]",
       "role": "staff",
       "active": true
