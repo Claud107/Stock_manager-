@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -186,6 +185,7 @@
       <div class="nav-item active" onclick="showPage('dashboard')"><span class="nav-icon">📊</span> Dashboard</div>
       <div class="nav-item" onclick="showPage('delivery')"><span class="nav-icon">🚚</span> Delivery Tracker<span class="nav-badge" id="deliveryBadge" style="display:none">0</span></div>
       <div class="nav-item" onclick="showPage('orders')"><span class="nav-icon">📦</span> Orders</div>
+      <div class="nav-item" onclick="showPage('returns')"><span class="nav-icon">↩️</span> Customer Returns</div>
       <div class="nav-item" onclick="showPage('customers')"><span class="nav-icon">👤</span> Customers</div>
       <div class="nav-item" onclick="showPage('stock')"><span class="nav-icon">🏪</span> Stock</div>
       <div class="nav-item" onclick="showPage('lowstock')"><span class="nav-icon">⚠️</span> Low Stock<span class="nav-badge" id="lowBadge" style="display:none">0</span></div>
@@ -263,6 +263,18 @@
         <div class="table-wrap">
           <div class="table-header"><h3>📦 All Orders</h3><span id="orderCount" style="font-size:12px;color:var(--text2)"></span></div>
           <table><thead><tr><th>#</th><th>Customer</th><th>WhatsApp</th><th>Date</th><th>Delivery</th><th>Items</th><th>Status</th><th>Actions</th></tr></thead><tbody id="ordersTable"></tbody></table>
+        </div>
+      </div>
+
+      <!-- CUSTOMER RETURNS -->
+      <div class="page" id="page-returns">
+        <div style="display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="openReturnModal()">↩️ New Return</button>
+          <div class="search-box"><span>🔍</span><input type="text" placeholder="Customer dhundo..." id="returnSearch" oninput="renderReturns()" /></div>
+        </div>
+        <div class="table-wrap">
+          <div class="table-header"><h3>↩️ Customer Returns</h3></div>
+          <table><thead><tr><th>#</th><th>Customer</th><th>Date</th><th>Items</th><th>Reason</th><th>Action</th></tr></thead><tbody id="returnsTable"></tbody></table>
         </div>
       </div>
 
@@ -431,6 +443,7 @@
         </div>
         <div class="form-group"><label>Min Alert Qty</label><input type="number" id="sMin" min="0" /></div>
         <div class="form-group"><label>Item Code</label><input type="text" id="sCode" /></div>
+        <div class="form-group"><label>🏭 Vendor Name</label><input type="text" id="sVendor" placeholder="e.g. Anchor, Havells..." /></div>
         <div class="form-group" style="grid-column:1/-1">
           <label>📍 Location *</label>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
@@ -450,6 +463,38 @@
     <div class="modal-footer">
       <button class="btn btn-secondary" onclick="closeModal('stockModal')">Cancel</button>
       <button class="btn btn-primary" onclick="saveStock()">💾 Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- RETURN MODAL -->
+<div class="modal-overlay" id="returnModal">
+  <div class="modal" style="max-width:680px">
+    <div class="modal-header"><h3>↩️ Customer Return</h3><button class="modal-close" onclick="closeModal('returnModal')">×</button></div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <div class="form-group"><label>Customer Name *</label><input type="text" id="rCustomer" /></div>
+        <div class="form-group"><label>Return Date *</label><input type="date" id="rDate" /></div>
+        <div class="form-group" style="grid-column:1/-1"><label>Reason</label><input type="text" id="rReason" placeholder="e.g. Damaged, Wrong item, Excess order..." /></div>
+      </div>
+      <div style="margin-top:14px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <label style="font-weight:700;font-size:13px">📋 Return Items</label>
+          <button class="btn btn-secondary btn-sm" onclick="addReturnItemRow()">➕ Item Add</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 140px 100px 36px;gap:6px;margin-bottom:4px;padding:0 2px">
+          <span style="font-size:11px;color:var(--text2)">ITEM NAME</span>
+          <span style="font-size:11px;color:var(--text2)">📍 LOCATION</span>
+          <span style="font-size:11px;color:var(--text2)">QTY</span>
+          <span></span>
+        </div>
+        <div id="returnItemsList"></div>
+      </div>
+      <div class="backup-info" style="margin-top:14px">✅ Return save karne pe stock automatically (+) ho jayega us location mein</div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('returnModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveReturn()">💾 Save Return</button>
     </div>
   </div>
 </div>
@@ -505,10 +550,10 @@
 <script>
 // ===== CONFIG =====
 const SHEETS_URL='https://script.google.com/macros/s/AKfycbz7h_74OmIgj5PlPtycFgityFoQrEpb64eHZxt_k3aFzXK_k1EUA4FDXSmxU6LJCNY/exec';
-const KEYS={orders:'sm-orders',stock:'sm-stock',users:'sm-users',stockHistory:'sm-stockHistory'};
+const KEYS={orders:'sm-orders',stock:'sm-stock',users:'sm-users',stockHistory:'sm-stockHistory',returns:'sm-returns'};
 
 // ===== STATE =====
-let DB={orders:[],stock:[],users:[],stockHistory:[]};
+let DB={orders:[],stock:[],users:[],stockHistory:[],returns:[]};
 let currentUser=null,editOrderIdx=-1,editStockIdx=-1,editUserIdx=-1,lastSavedOrder=null,activeCat='All',isSyncing=false;
 
 // ===== CLOUD STORAGE =====
@@ -520,7 +565,7 @@ async function syncAll(){
   if(isSyncing)return;isSyncing=true;setSyncStatus('syncing','Sync ho raha hai...');
   if(!storageAvailable()){setSyncStatus('error','⚠️ Storage unavailable');isSyncing=false;return;}
   try{
-    await Promise.all([cloudSet(KEYS.orders,DB.orders),cloudSet(KEYS.stock,DB.stock),cloudSet(KEYS.users,DB.users),cloudSet(KEYS.stockHistory,DB.stockHistory)]);
+    await Promise.all([cloudSet(KEYS.orders,DB.orders),cloudSet(KEYS.stock,DB.stock),cloudSet(KEYS.users,DB.users),cloudSet(KEYS.stockHistory,DB.stockHistory),cloudSet(KEYS.returns,DB.returns)]);
     Object.entries(KEYS).forEach(([k,sk])=>localStorage.setItem(sk,JSON.stringify(DB[k])));
     sheetsSync();
     setSyncStatus('ok','☁️ '+new Date().toLocaleTimeString('hi-IN'));
@@ -564,13 +609,15 @@ async function init(){
   DB.stock=JSON.parse(localStorage.getItem(KEYS.stock)||'[]');
   DB.users=JSON.parse(localStorage.getItem(KEYS.users)||'[]');
   DB.stockHistory=JSON.parse(localStorage.getItem(KEYS.stockHistory)||'[]');
+  DB.returns=JSON.parse(localStorage.getItem(KEYS.returns)||'[]');
   if(storageAvailable()){
     try{
-      const [o,s,u,h]=await Promise.all([cloudGet(KEYS.orders),cloudGet(KEYS.stock),cloudGet(KEYS.users),cloudGet(KEYS.stockHistory)]);
+      const [o,s,u,h,rt]=await Promise.all([cloudGet(KEYS.orders),cloudGet(KEYS.stock),cloudGet(KEYS.users),cloudGet(KEYS.stockHistory),cloudGet(KEYS.returns)]);
       if(o&&o.length>=DB.orders.length)DB.orders=o;
       if(s&&s.length>=DB.stock.length)DB.stock=s;
       if(u&&u.length>0)DB.users=u;
       if(h&&h.length>=DB.stockHistory.length)DB.stockHistory=h;
+      if(rt&&rt.length>=DB.returns.length)DB.returns=rt;
       setSyncStatus('ok','☁️ Connected');
     }catch(e){setSyncStatus('error','⚠️ Local only');}
   }else setSyncStatus('error','⚠️ Offline');
@@ -629,9 +676,9 @@ function showPage(page){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+page).classList.add('active');
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-  const map={dashboard:'📊 Dashboard',delivery:'🚚 Delivery Tracker',orders:'📦 Orders',customers:'👤 Customers',stock:'🏪 Stock',lowstock:'⚠️ Low Stock',history:'📋 History',reports:'📈 Reports',backup:'💾 Backup & Sync',users:'👥 Users'};
+  const map={dashboard:'📊 Dashboard',delivery:'🚚 Delivery Tracker',orders:'📦 Orders',returns:'↩️ Customer Returns',customers:'👤 Customers',stock:'🏪 Stock',lowstock:'⚠️ Low Stock',history:'📋 History',reports:'📈 Reports',backup:'💾 Backup & Sync',users:'👥 Users'};
   document.getElementById('pageTitle').textContent=map[page]||page;
-  const renders={dashboard:renderDashboard,delivery:renderDelivery,orders:renderOrders,customers:renderCustomers,stock:renderStock,lowstock:renderLowStock,history:renderHistory,reports:renderReports,backup:renderBackup,users:renderUsers};
+  const renders={dashboard:renderDashboard,delivery:renderDelivery,orders:renderOrders,returns:renderReturns,customers:renderCustomers,stock:renderStock,lowstock:renderLowStock,history:renderHistory,reports:renderReports,backup:renderBackup,users:renderUsers};
   if(renders[page])renders[page]();
   if(window.innerWidth<=768)document.getElementById('sidebar').classList.remove('open');
 }
@@ -655,6 +702,7 @@ function renderDashboard(){
     <div class="stat-card" onclick="showPage('delivery')"><div class="stat-icon">🚚</div><div><div class="stat-label">Aaj Delivery</div><div class="stat-value" style="color:var(--warn)">${todayDel.length}</div></div></div>
     <div class="stat-card" onclick="showPage('lowstock')"><div class="stat-icon">⚠️</div><div><div class="stat-label">Low Stock</div><div class="stat-value" style="color:var(--danger)">${lowStock.length}</div></div></div>
     <div class="stat-card" onclick="showPage('stock')"><div class="stat-icon">🏪</div><div><div class="stat-label">Stock Entries</div><div class="stat-value">${DB.stock.length}</div></div></div>
+    <div class="stat-card" onclick="showPage('returns')"><div class="stat-icon">↩️</div><div><div class="stat-label">Returns</div><div class="stat-value" style="color:var(--accent2)">${DB.returns.length}</div></div></div>
   `;
   document.getElementById('recentOrdersTable').innerHTML=[...DB.orders].reverse().slice(0,5).map(o=>`<tr><td><b>${o.customer}</b></td><td>${o.items.map(i=>i.name.split(' ').slice(0,2).join(' ')+'×'+i.qty).join(', ').substring(0,35)}</td><td><span class="badge ${statusBadge(o.status)}">${o.status}</span></td></tr>`).join('')||'<tr><td colspan="3" class="empty-state"><div class="ei">📦</div></td></tr>';
   document.getElementById('todayDeliveryTable').innerHTML=todayDel.length?todayDel.map(o=>`<tr><td><b>${o.customer}</b></td><td>${o.delivery}</td><td><span class="badge badge-yellow">Aaj</span></td></tr>`).join(''):'<tr><td colspan="3" style="text-align:center;padding:16px;color:var(--accent)">✅ Aaj koi delivery nahi</td></tr>';
@@ -680,6 +728,111 @@ function renderDeliveryTable(){
   document.getElementById('deliveryTable').innerHTML=pending.length?pending.map((o,i)=>{const oi=DB.orders.indexOf(o);const diff=daysDiff(o.delivery||today);const dl=diff<0?`<span style="color:var(--danger);font-weight:700">${Math.abs(diff)} din late</span>`:diff===0?`<span style="color:var(--warn);font-weight:700">AAJ</span>`:`<span style="color:var(--accent)">${diff} din</span>`;return`<tr class="${diff<0?'overdue-row':diff===0?'today-row':''}"><td>${i+1}</td><td><b>${o.customer}</b></td><td>${o.items.map(i=>i.name.split(' ').slice(0,2).join(' ')+(i.location?' ['+i.location+']':'')+'×'+i.qty).join(', ')}</td><td>${fmtDate(o.date)}</td><td>${fmtDate(o.delivery)}</td><td>${dl}</td><td><span class="badge ${statusBadge(o.status)}">${o.status}</span></td><td><div style="display:flex;gap:4px"><button class="btn btn-primary btn-sm" onclick="markDelivered(${oi})">✅</button><button class="btn btn-wa btn-sm" onclick="sendWAByIdx(${oi})">💬</button></div></td></tr>`;}).join(''):'<tr><td colspan="8"><div class="empty-state"><div class="ei">🚚</div><p>Koi pending nahi</p></div></td></tr>';
 }
 function markDelivered(idx){DB.orders[idx].status='Delivered';DB.orders[idx].deliveredAt=new Date().toISOString();save('orders');updateBadges();renderDelivery();showToast('✅ Delivered!');}
+
+// ===== CUSTOMER RETURNS =====
+function openReturnModal(){
+  document.getElementById('rCustomer').value='';
+  document.getElementById('rReason').value='';
+  document.getElementById('rDate').value=new Date().toISOString().split('T')[0];
+  document.getElementById('returnItemsList').innerHTML='';
+  addReturnItemRow();
+  openModal('returnModal');
+}
+function addReturnItemRow(name='',location='',qty=''){
+  const div=document.createElement('div');div.className='item-row';
+  const uid='rr_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);
+  const allLocs=[...new Set(DB.stock.map(s=>s.location).filter(Boolean))];
+  div.innerHTML=`
+    <div style="position:relative">
+      <input type="text" id="${uid}_inp" placeholder="🔍 Item search karo..." value="${name}" autocomplete="off"
+        style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px 10px;color:var(--text);font-family:inherit;font-size:12px"
+        oninput="showReturnItemDrop('${uid}')" onfocus="showReturnItemDrop('${uid}')" onblur="setTimeout(()=>hideReturnItemDrop('${uid}'),200)" />
+      <input type="hidden" id="${uid}_val" value="${name}" />
+      <div id="${uid}_drop" style="display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);border:1px solid var(--accent);border-radius:8px;max-height:200px;overflow-y:auto;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,0.5)"></div>
+    </div>
+    <select id="${uid}_loc" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px 10px;color:var(--text);font-family:inherit;font-size:12px">
+      <option value="">📍 Location</option>
+      ${allLocs.map(l=>`<option value="${l}" ${l===location?'selected':''}>${l}</option>`).join('')}
+    </select>
+    <input type="number" id="${uid}_qty" placeholder="Qty" value="${qty}" min="1"
+      style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px 10px;color:var(--text);font-family:inherit;font-size:12px" />
+    <button class="remove-item" onclick="this.parentElement.remove()">×</button>
+  `;
+  document.getElementById('returnItemsList').appendChild(div);
+}
+function showReturnItemDrop(uid){
+  const inp=document.getElementById(uid+'_inp');
+  const drop=document.getElementById(uid+'_drop');
+  const q=inp.value.toLowerCase();
+  const filtered=DB.stock.filter(s=>s.name.toLowerCase().includes(q)||s.category.toLowerCase().includes(q));
+  if(!filtered.length){drop.style.display='none';return;}
+  drop.innerHTML=filtered.map(s=>`
+    <div onclick="selectReturnItem('${uid}','${s.name.replace(/'/g,"\\'")}','${(s.location||'').replace(/'/g,"\\'")}');event.stopPropagation()"
+      style="padding:10px 12px;cursor:pointer;border-bottom:1px solid var(--border);font-size:12px"
+      onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background=''">
+      <div style="font-weight:700">${s.name}</div>
+      <div style="display:flex;gap:10px;margin-top:3px;font-size:11px;color:var(--text2)">
+        <span class="badge badge-purple">📍 ${s.location||'—'}</span>
+        <span class="badge badge-green">Stock: ${s.qty} ${s.unit}</span>
+      </div>
+    </div>
+  `).join('');
+  drop.style.display='block';
+}
+function selectReturnItem(uid,name,location){
+  document.getElementById(uid+'_inp').value=name;
+  document.getElementById(uid+'_val').value=name;
+  const locSel=document.getElementById(uid+'_loc');
+  for(let i=0;i<locSel.options.length;i++){if(locSel.options[i].value===location){locSel.selectedIndex=i;break;}}
+  hideReturnItemDrop(uid);
+}
+function hideReturnItemDrop(uid){const d=document.getElementById(uid+'_drop');if(d)d.style.display='none';}
+
+function saveReturn(){
+  const customer=document.getElementById('rCustomer').value.trim();
+  const date=document.getElementById('rDate').value;
+  const reason=document.getElementById('rReason').value.trim();
+  if(!customer||!date){showToast('❌ Customer naam aur date zaroori!');return;}
+  const items=[];
+  document.getElementById('returnItemsList').querySelectorAll('.item-row').forEach(r=>{
+    const nameEl=r.querySelector('input[type="hidden"]');
+    const locEl=r.querySelector('select');
+    const qtyEl=r.querySelector('input[type="number"]');
+    const name=nameEl?nameEl.value:'';
+    const loc=locEl?locEl.value:'';
+    if(name&&qtyEl?.value)items.push({name,location:loc,qty:parseInt(qtyEl.value)});
+  });
+  if(!items.length){showToast('❌ Kam se kam ek item add karo!');return;}
+
+  DB.returns.push({customer,date,reason,items,createdAt:new Date().toISOString()});
+
+  // STOCK ADDITION — location specific (+)
+  items.forEach(item=>{
+    let si=DB.stock.findIndex(s=>s.name===item.name&&(s.location||'')===(item.location||''));
+    if(si>=0){
+      const before=DB.stock[si].qty;
+      DB.stock[si].qty=DB.stock[si].qty+item.qty;
+      DB.stockHistory.push({date,item:item.name,location:item.location||'',type:'IN',qty:item.qty,reason:`Return - ${customer}${reason?' ('+reason+')':''}`,before,after:DB.stock[si].qty});
+    }else{
+      const si2=DB.stock.findIndex(s=>s.name===item.name);
+      if(si2>=0){
+        const before=DB.stock[si2].qty;
+        DB.stock[si2].qty=DB.stock[si2].qty+item.qty;
+        DB.stockHistory.push({date,item:item.name,location:DB.stock[si2].location||'',type:'IN',qty:item.qty,reason:`Return - ${customer}${reason?' ('+reason+')':''}`,before,after:DB.stock[si2].qty});
+      }
+    }
+  });
+  save('stock');save('stockHistory');save('returns');
+  closeModal('returnModal');updateBadges();renderReturns();
+  showToast('✅ Return saved aur stock (+) ho gaya!');
+}
+
+function renderReturns(){
+  const search=(document.getElementById('returnSearch')||{value:''}).value.toLowerCase();
+  const filtered=DB.returns.filter(r=>r.customer.toLowerCase().includes(search));
+  document.getElementById('returnsTable').innerHTML=filtered.length?[...filtered].reverse().map((r)=>{const ri=DB.returns.indexOf(r);return`<tr><td>${ri+1}</td><td><b>${r.customer}</b></td><td>${fmtDate(r.date)}</td><td>${r.items.map(i=>i.name+(i.location?' ['+i.location+']':'')+'×'+i.qty).join(', ')}</td><td>${r.reason||'-'}</td><td><button class="btn btn-danger btn-sm" onclick="deleteReturn(${ri})">🗑️</button></td></tr>`;}).join(''):'<tr><td colspan="6"><div class="empty-state"><div class="ei">↩️</div><p>Koi return nahi</p></div></td></tr>';
+}
+function deleteReturn(idx){if(!confirm('Delete? (Stock wapas adjust nahi hoga)'))return;DB.returns.splice(idx,1);save('returns');renderReturns();showToast('🗑️ Deleted!');}
 
 // ===== ORDERS =====
 function renderOrders(){
@@ -919,7 +1072,7 @@ function renderStock(){
             const neg=s.qty<0;
             const stockClass=neg?'stock-neg':low?'stock-low':'stock-ok';
             return`<tr style="${s.color&&s.color!=='#1e2d45'?'background:'+s.color+'22;border-left:3px solid '+s.color:''}">
-              <td><b>${s.name}</b>${s.code?`<br><span style="font-size:10px;color:var(--text2)">${s.code}</span>`:''}</td>
+              <td><b>${s.name}</b>${s.code?`<br><span style="font-size:10px;color:var(--text2)">${s.code}</span>`:''}${s.vendor?`<br><span style="font-size:10px;color:var(--accent2)">🏭 ${s.vendor}</span>`:''}</td>
               <td><span class="badge badge-blue">${s.category}</span></td>
               <td class="${stockClass}">${neg?'⚠️ ':''} ${s.qty}</td>
               <td>${s.unit}</td>
@@ -944,23 +1097,24 @@ function setActiveCat(cat,el){activeCat=cat;renderStock();}
 function openStockModal(idx=-1){
   editStockIdx=idx;
   document.getElementById('stockModalTitle').textContent=idx>=0?'✏️ Edit Stock':'🏪 New Stock';
-  if(idx>=0){const s=DB.stock[idx];document.getElementById('sName').value=s.name;document.getElementById('sCategory').value=s.category;document.getElementById('sQty').value=s.qty;document.getElementById('sUnit').value=s.unit;document.getElementById('sMin').value=s.minAlert||'';document.getElementById('sCode').value=s.code||'';document.getElementById('sLocation').value=s.location||'';}
-  else{['sName','sQty','sMin','sCode','sLocation'].forEach(id=>document.getElementById(id).value='');document.getElementById('sCategory').value='';document.getElementById('sUnit').value='Pcs';}
+  if(idx>=0){const s=DB.stock[idx];document.getElementById('sName').value=s.name;document.getElementById('sCategory').value=s.category;document.getElementById('sQty').value=s.qty;document.getElementById('sUnit').value=s.unit;document.getElementById('sMin').value=s.minAlert||'';document.getElementById('sCode').value=s.code||'';document.getElementById('sLocation').value=s.location||'';document.getElementById('sVendor').value=s.vendor||'';}
+  else{['sName','sQty','sMin','sCode','sLocation','sVendor'].forEach(id=>document.getElementById(id).value='');document.getElementById('sCategory').value='';document.getElementById('sUnit').value='Pcs';}
   openModal('stockModal');
 }
 function saveStock(){
   const name=document.getElementById('sName').value.trim(),category=document.getElementById('sCategory').value;
   const qty=parseInt(document.getElementById('sQty').value)||0,unit=document.getElementById('sUnit').value;
   const minAlert=parseInt(document.getElementById('sMin').value)||0,code=document.getElementById('sCode').value.trim(),location=document.getElementById('sLocation').value.trim();
+  const vendor=document.getElementById('sVendor').value.trim();
   if(!name||!category){showToast('❌ Name aur category zaroori!');return;}
   if(editStockIdx>=0){
     const old=DB.stock[editStockIdx].qty;
-    DB.stock[editStockIdx]={name,category,qty,unit,minAlert,code,location};
-    if(old!==qty)DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,type:qty>old?'IN':'ADJ',qty:Math.abs(qty-old),reason:'Manual',before:old,after:qty});
+    DB.stock[editStockIdx]={name,category,qty,unit,minAlert,code,location,vendor,color:DB.stock[editStockIdx].color};
+    if(old!==qty)DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,vendor,type:qty>old?'IN':'ADJ',qty:Math.abs(qty-old),reason:'Manual',before:old,after:qty});
     showToast('✅ Updated!');
   }else{
-    DB.stock.push({name,category,qty,unit,minAlert,code,location});
-    DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,type:'IN',qty,reason:'New stock',before:0,after:qty});
+    DB.stock.push({name,category,qty,unit,minAlert,code,location,vendor});
+    DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,vendor,type:'IN',qty,reason:vendor?`New stock from ${vendor}`:'New stock',before:0,after:qty});
     showToast('✅ Stock add ho gaya!');
   }
   save('stock');save('stockHistory');closeModal('stockModal');updateBadges();renderStock();editStockIdx=-1;
@@ -1001,7 +1155,7 @@ function renderCustHist(){
   document.getElementById('custHistTable').innerHTML=Object.entries(custMap).filter(([n])=>n.toLowerCase().includes(search)).map(([name,d])=>`<tr><td><b>${name}</b></td><td>${d.whatsapp||'-'}</td><td><span class="badge badge-blue">${d.orders.length}</span></td><td>${fmtDate(d.last)}</td><td><button class="btn btn-secondary btn-sm" onclick="showCustDetail('${name}')">📋</button></td></tr>`).join('')||'<tr><td colspan="5"><div class="empty-state"><div class="ei">👤</div><p>Koi nahi</p></div></td></tr>';
 }
 function renderStockHist(){
-  document.getElementById('stockHistTable').innerHTML=[...DB.stockHistory].reverse().slice(0,100).map(h=>`<tr><td>${fmtDate(h.date)}</td><td>${h.item}</td><td><span class="badge badge-purple">📍 ${h.location||'?'}</span></td><td><span class="badge ${h.type==='IN'?'badge-green':h.type==='OUT'?'badge-red':'badge-yellow'}">${h.type}</span></td><td>${h.qty}${h.before!==undefined?`<span style="font-size:10px;color:var(--text2)"> (${h.before}→${h.after})</span>`:''}</td><td>${h.reason}</td></tr>`).join('')||'<tr><td colspan="6"><div class="empty-state"><div class="ei">📋</div><p>Koi history nahi</p></div></td></tr>';
+  document.getElementById('stockHistTable').innerHTML=[...DB.stockHistory].reverse().slice(0,100).map(h=>`<tr><td>${fmtDate(h.date)}</td><td>${h.item}${h.vendor?`<br><span style="font-size:10px;color:var(--accent2)">🏭 ${h.vendor}</span>`:''}</td><td><span class="badge badge-purple">📍 ${h.location||'?'}</span></td><td><span class="badge ${h.type==='IN'?'badge-green':h.type==='OUT'?'badge-red':'badge-yellow'}">${h.type}</span></td><td>${h.qty}${h.before!==undefined?`<span style="font-size:10px;color:var(--text2)"> (${h.before}→${h.after})</span>`:''}</td><td>${h.reason}</td></tr>`).join('')||'<tr><td colspan="6"><div class="empty-state"><div class="ei">📋</div><p>Koi history nahi</p></div></td></tr>';
 }
 
 // ===== REPORTS =====
