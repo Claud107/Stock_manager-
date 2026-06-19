@@ -576,23 +576,44 @@ async function syncAll(){
 
 async function sheetsSync(){
   try{
-    const body={type:'all',
-      orders:DB.orders.map(o=>[o.customer,o.whatsapp||'',o.date,o.delivery||'',o.note||'',o.items.map(i=>i.name+(i.location?' ['+i.location+']':'')+'×'+i.qty).join(', '),o.status,o.createdAt||'']),
-      stock:DB.stock.map(s=>[s.name,s.category,s.qty,s.unit,s.minAlert||0,s.code||'',s.location||''])
-    };
-    await fetch(SHEETS_URL,{method:'POST',body:JSON.stringify(body)});
+    setSyncStatus('syncing','Google Sheets sync...');
+    // Send orders
+    const ordersBody={type:'orders',rows:DB.orders.map(o=>[o.customer,o.whatsapp||'',o.date,o.delivery||'',o.note||'',o.items.map(i=>i.name+(i.location?' ['+i.location+']':'')+'×'+i.qty).join(', '),o.status,o.createdAt||''])};
+    await fetch(SHEETS_URL,{method:'POST',body:JSON.stringify(ordersBody)});
+
+    // Send stock in chunks of 50
+    const chunkSize=50;
+    const stockRows=DB.stock.map(s=>[s.name,s.category,s.qty,s.unit,s.minAlert||0,s.code||'',s.location||'',s.vendor||'']);
+    for(let i=0;i<stockRows.length;i+=chunkSize){
+      const chunk=stockRows.slice(i,i+chunkSize);
+      const body={type: i===0?'stock':'stock_append', rows:chunk, offset:i};
+      await fetch(SHEETS_URL,{method:'POST',body:JSON.stringify(body)});
+    }
     setSyncStatus('ok','📊 Sheets synced: '+new Date().toLocaleTimeString('hi-IN'));
-  }catch(e){setSyncStatus('error','⚠️ Sheets failed');}
+    showToast('📊 Google Sheets sync complete! ('+DB.stock.length+' items)');
+  }catch(e){setSyncStatus('error','⚠️ Sheets failed: '+e.message);}
 }
 async function sheetsLoad(){
   try{
-    setSyncStatus('syncing','Sheets se load...');
-    const res=await fetch(SHEETS_URL+'?type=all');
-    const data=await res.json();
-    if(data.orders&&data.orders.length>1){DB.orders=data.orders.slice(1).map(r=>({customer:r[0],whatsapp:r[1],date:r[2],delivery:r[3],note:r[4],items:(r[5]||'').split(', ').filter(Boolean).map(s=>{const m=s.match(/^(.*?)(?:\s*\[([^\]]*)\])?×(\d+)$/);return m?{name:m[1].trim(),location:m[2]||'',qty:parseInt(m[3])||1}:{name:s,qty:1};}),status:r[6],createdAt:r[7]})).filter(o=>o.customer);}
-    if(data.stock&&data.stock.length>1){DB.stock=data.stock.slice(1).map(r=>({name:r[0],category:r[1],qty:parseInt(r[2])||0,unit:r[3],minAlert:parseInt(r[4])||0,code:r[5],location:r[6]})).filter(s=>s.name);}
-    save('orders');save('stock');setSyncStatus('ok','✅ Loaded!');showToast('📊 Sheets se data load ho gaya!');updateBadges();
-  }catch(e){setSyncStatus('error','⚠️ Load failed');}
+    setSyncStatus('syncing','Sheets se load ho raha hai...');
+    // Load orders
+    const resO=await fetch(SHEETS_URL+'?type=orders');
+    const dataO=await resO.json();
+    if(dataO.rows&&dataO.rows.length>1){
+      DB.orders=dataO.rows.slice(1).map(r=>({customer:r[0],whatsapp:r[1],date:r[2],delivery:r[3],note:r[4],items:(r[5]||'').split(', ').filter(Boolean).map(s=>{const m=s.match(/^(.*?)(?:\s*\[([^\]]*)\])?×(\d+)$/);return m?{name:m[1].trim(),location:m[2]||'',qty:parseInt(m[3])||1}:{name:s,qty:1};}),status:r[6],createdAt:r[7]})).filter(o=>o.customer);
+    }
+    // Load stock
+    const resS=await fetch(SHEETS_URL+'?type=stock');
+    const dataS=await resS.json();
+    if(dataS.rows&&dataS.rows.length>1){
+      DB.stock=dataS.rows.slice(1).map(r=>({name:r[0],category:r[1],qty:parseInt(r[2])||0,unit:r[3],minAlert:parseInt(r[4])||0,code:r[5]||'',location:r[6]||'',vendor:r[7]||''})).filter(s=>s.name);
+    }
+    save('orders');save('stock');
+    setSyncStatus('ok','✅ Sheets se loaded! Stock: '+DB.stock.length+' items');
+    showToast('📊 '+DB.stock.length+' stock items + '+DB.orders.length+' orders load ho gaye!');
+    updateBadges();
+    showPage('dashboard');
+  }catch(e){setSyncStatus('error','⚠️ Sheets load failed: '+e.message);}
 }
 
 function save(key){
