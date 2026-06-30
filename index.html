@@ -437,8 +437,10 @@
         <div class="form-group"><label>Category *</label>
           <select id="sCategory"><option value="">Select</option><option>Plate</option><option>Switch</option><option>MCB</option><option>Accessory</option><option>Wire</option><option>Other</option></select>
         </div>
+        <div class="form-group"><label>🎁 Cartoons</label><input type="number" id="sCartoons" min="0" placeholder="e.g. 2" oninput="calcTotal()" /></div>
+        <div class="form-group"><label>🔢 Pcs/Cartoon</label><input type="number" id="sPcsPerCarton" min="0" placeholder="e.g. 1400" oninput="calcTotal()" /></div>
         <div class="form-group"><label>📦 Boxes</label><input type="number" id="sBoxes" min="0" placeholder="e.g. 5" oninput="calcTotal()" /></div>
-        <div class="form-group"><label>🔢 Pcs per Box</label><input type="number" id="sPcsPerBox" min="0" placeholder="e.g. 20" oninput="calcTotal()" /></div>
+        <div class="form-group"><label>🔢 Pcs/Box</label><input type="number" id="sPcsPerBox" min="0" placeholder="e.g. 20" oninput="calcTotal()" /></div>
         <div class="form-group"><label>📊 Total Pcs (auto)</label><input type="number" id="sQty" min="0" placeholder="Auto calculate" style="background:var(--bg);color:var(--accent);font-weight:700" /></div>
         <div class="form-group"><label>Unit</label>
           <select id="sUnit"><option>Pcs</option><option>Meter</option><option>Roll</option><option>Box</option><option>Set</option></select>
@@ -665,11 +667,14 @@ function fmtDate(d){return d?new Date(d).toLocaleDateString('en-IN',{day:'2-digi
 function showLoading(msg){document.getElementById('loadingOverlay').style.display='flex';document.getElementById('loadingText').textContent=msg||'Loading...';}
 function hideLoading(){document.getElementById('loadingOverlay').style.display='none';}
 function calcTotal(){
+  const cartoons=parseInt(document.getElementById('sCartoons').value)||0;
+  const pcsPerCarton=parseInt(document.getElementById('sPcsPerCarton').value)||0;
   const boxes=parseInt(document.getElementById('sBoxes').value)||0;
   const pcsPerBox=parseInt(document.getElementById('sPcsPerBox').value)||0;
-  if(boxes>0&&pcsPerBox>0){
-    document.getElementById('sQty').value=boxes*pcsPerBox;
-  }
+  const totalFromCartons=cartoons*pcsPerCarton;
+  const totalFromBoxes=boxes*pcsPerBox;
+  const total=totalFromCartons+totalFromBoxes;
+  if(total>0) document.getElementById('sQty').value=total;
 }
 function setLoc(v){const el=document.getElementById('sLocation');el.value=v;el.focus();el.setSelectionRange(v.length,v.length);}
 
@@ -1175,8 +1180,8 @@ function setActiveCat(cat,el){activeCat=cat;renderStock();}
 function openStockModal(idx=-1){
   editStockIdx=idx;
   document.getElementById('stockModalTitle').textContent=idx>=0?'✏️ Edit Stock':'🏪 New Stock';
-  if(idx>=0){const s=DB.stock[idx];document.getElementById('sName').value=s.name;document.getElementById('sCategory').value=s.category;document.getElementById('sQty').value=s.qty;document.getElementById('sBoxes').value=s.boxes||'';document.getElementById('sPcsPerBox').value=s.pcsPerBox||'';document.getElementById('sUnit').value=s.unit;document.getElementById('sMin').value=s.minAlert||'';document.getElementById('sCode').value=s.code||'';document.getElementById('sLocation').value=s.location||'';document.getElementById('sVendor').value=s.vendor||'';}
-  else{['sName','sQty','sMin','sCode','sLocation','sVendor','sBoxes','sPcsPerBox'].forEach(id=>document.getElementById(id).value='');document.getElementById('sCategory').value='';document.getElementById('sUnit').value='Pcs';}
+  if(idx>=0){const s=DB.stock[idx];document.getElementById('sName').value=s.name;document.getElementById('sCategory').value=s.category;document.getElementById('sQty').value=s.qty;document.getElementById('sBoxes').value=s.boxes||'';document.getElementById('sPcsPerBox').value=s.pcsPerBox||'';document.getElementById('sCartoons').value=s.cartoons||'';document.getElementById('sPcsPerCarton').value=s.pcsPerCarton||'';document.getElementById('sUnit').value=s.unit;document.getElementById('sMin').value=s.minAlert||'';document.getElementById('sCode').value=s.code||'';document.getElementById('sLocation').value=s.location||'';document.getElementById('sVendor').value=s.vendor||'';}
+  else{['sName','sQty','sMin','sCode','sLocation','sVendor','sBoxes','sPcsPerBox','sCartoons','sPcsPerCarton'].forEach(id=>document.getElementById(id).value='');document.getElementById('sCategory').value='';document.getElementById('sUnit').value='Pcs';}
   openModal('stockModal');
 }
 function saveStock(){
@@ -1186,14 +1191,16 @@ function saveStock(){
   const vendor=document.getElementById('sVendor').value.trim();
   const boxes=parseInt(document.getElementById('sBoxes').value)||0;
   const pcsPerBox=parseInt(document.getElementById('sPcsPerBox').value)||0;
+  const cartoons=parseInt(document.getElementById('sCartoons').value)||0;
+  const pcsPerCarton=parseInt(document.getElementById('sPcsPerCarton').value)||0;
   if(!name||!category){showToast('❌ Name aur category zaroori!');return;}
   if(editStockIdx>=0){
     const old=DB.stock[editStockIdx].qty;
-    DB.stock[editStockIdx]={name,category,qty,unit,minAlert,code,location,vendor,boxes,pcsPerBox,color:DB.stock[editStockIdx].color};
+    DB.stock[editStockIdx]={name,category,qty,unit,minAlert,code,location,vendor,boxes,pcsPerBox,cartoons,pcsPerCarton,color:DB.stock[editStockIdx].color};
     if(old!==qty)DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,vendor,type:qty>old?'IN':'ADJ',qty:Math.abs(qty-old),reason:'Manual',before:old,after:qty});
     showToast('✅ Updated!');
   }else{
-    DB.stock.push({name,category,qty,unit,minAlert,code,location,vendor,boxes,pcsPerBox});
+    DB.stock.push({name,category,qty,unit,minAlert,code,location,vendor,boxes,pcsPerBox,cartoons,pcsPerCarton});
     DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,vendor,type:'IN',qty,reason:vendor?`New stock from ${vendor}`:'New stock',before:0,after:qty});
     showToast('✅ Stock add ho gaya!');
   }
