@@ -437,7 +437,9 @@
         <div class="form-group"><label>Category *</label>
           <select id="sCategory"><option value="">Select</option><option>Plate</option><option>Switch</option><option>MCB</option><option>Accessory</option><option>Wire</option><option>Other</option></select>
         </div>
-        <div class="form-group"><label>Stock Quantity *</label><input type="number" id="sQty" min="0" /></div>
+        <div class="form-group"><label>📦 Boxes</label><input type="number" id="sBoxes" min="0" placeholder="e.g. 5" oninput="calcTotal()" /></div>
+        <div class="form-group"><label>🔢 Pcs per Box</label><input type="number" id="sPcsPerBox" min="0" placeholder="e.g. 20" oninput="calcTotal()" /></div>
+        <div class="form-group"><label>📊 Total Pcs (auto)</label><input type="number" id="sQty" min="0" placeholder="Auto calculate" style="background:var(--bg);color:var(--accent);font-weight:700" /></div>
         <div class="form-group"><label>Unit</label>
           <select id="sUnit"><option>Pcs</option><option>Meter</option><option>Roll</option><option>Box</option><option>Set</option></select>
         </div>
@@ -662,6 +664,13 @@ function daysDiff(d){const t=new Date();t.setHours(0,0,0,0);const x=new Date(d);
 function fmtDate(d){return d?new Date(d).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}):'-';}
 function showLoading(msg){document.getElementById('loadingOverlay').style.display='flex';document.getElementById('loadingText').textContent=msg||'Loading...';}
 function hideLoading(){document.getElementById('loadingOverlay').style.display='none';}
+function calcTotal(){
+  const boxes=parseInt(document.getElementById('sBoxes').value)||0;
+  const pcsPerBox=parseInt(document.getElementById('sPcsPerBox').value)||0;
+  if(boxes>0&&pcsPerBox>0){
+    document.getElementById('sQty').value=boxes*pcsPerBox;
+  }
+}
 function setLoc(v){const el=document.getElementById('sLocation');el.value=v;el.focus();el.setSelectionRange(v.length,v.length);}
 
 // ===== LOGIN =====
@@ -1143,7 +1152,7 @@ function renderStock(){
             return`<tr style="${s.color&&s.color!=='#1e2d45'?'background:'+s.color+'22;border-left:3px solid '+s.color:''}">
               <td><b>${s.name}</b>${s.code?`<br><span style="font-size:10px;color:var(--text2)">${s.code}</span>`:''}${s.vendor?`<br><span style="font-size:10px;color:var(--accent2)">🏭 ${s.vendor}</span>`:''}</td>
               <td><span class="badge badge-blue">${s.category}</span></td>
-              <td class="${stockClass}">${neg?'⚠️ ':''} ${s.qty}</td>
+              <td class="${stockClass}">${neg?'⚠️ ':''} ${s.qty}${s.boxes?`<br><span style="font-size:10px;color:var(--text2)">📦 ${s.boxes} box × ${s.pcsPerBox} pcs</span>`:''}</td>
               <td>${s.unit}</td>
               <td>${s.minAlert||'-'}</td>
               <td><span class="badge ${neg?'badge-red':low?'badge-red':'badge-green'}">${neg?'❌ Negative':low?'⚠️ Low':'✅ OK'}</span></td>
@@ -1166,8 +1175,8 @@ function setActiveCat(cat,el){activeCat=cat;renderStock();}
 function openStockModal(idx=-1){
   editStockIdx=idx;
   document.getElementById('stockModalTitle').textContent=idx>=0?'✏️ Edit Stock':'🏪 New Stock';
-  if(idx>=0){const s=DB.stock[idx];document.getElementById('sName').value=s.name;document.getElementById('sCategory').value=s.category;document.getElementById('sQty').value=s.qty;document.getElementById('sUnit').value=s.unit;document.getElementById('sMin').value=s.minAlert||'';document.getElementById('sCode').value=s.code||'';document.getElementById('sLocation').value=s.location||'';document.getElementById('sVendor').value=s.vendor||'';}
-  else{['sName','sQty','sMin','sCode','sLocation','sVendor'].forEach(id=>document.getElementById(id).value='');document.getElementById('sCategory').value='';document.getElementById('sUnit').value='Pcs';}
+  if(idx>=0){const s=DB.stock[idx];document.getElementById('sName').value=s.name;document.getElementById('sCategory').value=s.category;document.getElementById('sQty').value=s.qty;document.getElementById('sBoxes').value=s.boxes||'';document.getElementById('sPcsPerBox').value=s.pcsPerBox||'';document.getElementById('sUnit').value=s.unit;document.getElementById('sMin').value=s.minAlert||'';document.getElementById('sCode').value=s.code||'';document.getElementById('sLocation').value=s.location||'';document.getElementById('sVendor').value=s.vendor||'';}
+  else{['sName','sQty','sMin','sCode','sLocation','sVendor','sBoxes','sPcsPerBox'].forEach(id=>document.getElementById(id).value='');document.getElementById('sCategory').value='';document.getElementById('sUnit').value='Pcs';}
   openModal('stockModal');
 }
 function saveStock(){
@@ -1175,14 +1184,16 @@ function saveStock(){
   const qty=parseInt(document.getElementById('sQty').value)||0,unit=document.getElementById('sUnit').value;
   const minAlert=parseInt(document.getElementById('sMin').value)||0,code=document.getElementById('sCode').value.trim(),location=document.getElementById('sLocation').value.trim();
   const vendor=document.getElementById('sVendor').value.trim();
+  const boxes=parseInt(document.getElementById('sBoxes').value)||0;
+  const pcsPerBox=parseInt(document.getElementById('sPcsPerBox').value)||0;
   if(!name||!category){showToast('❌ Name aur category zaroori!');return;}
   if(editStockIdx>=0){
     const old=DB.stock[editStockIdx].qty;
-    DB.stock[editStockIdx]={name,category,qty,unit,minAlert,code,location,vendor,color:DB.stock[editStockIdx].color};
+    DB.stock[editStockIdx]={name,category,qty,unit,minAlert,code,location,vendor,boxes,pcsPerBox,color:DB.stock[editStockIdx].color};
     if(old!==qty)DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,vendor,type:qty>old?'IN':'ADJ',qty:Math.abs(qty-old),reason:'Manual',before:old,after:qty});
     showToast('✅ Updated!');
   }else{
-    DB.stock.push({name,category,qty,unit,minAlert,code,location,vendor});
+    DB.stock.push({name,category,qty,unit,minAlert,code,location,vendor,boxes,pcsPerBox});
     DB.stockHistory.push({date:new Date().toISOString().split('T')[0],item:name,location,vendor,type:'IN',qty,reason:vendor?`New stock from ${vendor}`:'New stock',before:0,after:qty});
     showToast('✅ Stock add ho gaya!');
   }
